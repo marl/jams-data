@@ -16,6 +16,11 @@ import jams
 __curator__ = dict(name='Doug Turnbull')
 __corpus__ = 'CAL500'
 
+# These artists are problematic for uniquely parsing artist-track:
+
+ARTIST_MAP = {'chi': 'chi-lites',
+              'go': 'go-gos',
+              'sir_mix': 'sir_mix-a-lot'}
 
 def get_track_duration(filename):
     '''Get the track duration for a filename'''
@@ -66,7 +71,14 @@ def process_track(input_dir, output_dir, metadata, tags, compress):
                                                os.path.extsep.join([metadata['track'],
                                                'mp3'])))
 
-    artist, title = metadata['track'].split('-', 1)
+    artist, _ = metadata['track'].split('-', 1)
+
+    artist = ARTIST_MAP.get(artist, artist)
+
+    title = metadata['track'].replace('{:s}-'.format(artist), '')
+
+    artist = artist.replace('_', ' ')
+    title = title.replace('_', ' ')
 
     file_meta = jams.FileMetadata(title=title,
                                   artist=artist,
