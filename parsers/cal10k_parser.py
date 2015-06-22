@@ -35,25 +35,29 @@ def load_tags(tag_file, song_table):
     return tags
 
 
-def save_jam(output_dir, jam, id_num):
+def save_jam(output_dir, jam, id_num, compress):
     '''Save the output jam'''
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    outfile = os.extsep.join([str(id_num), 'jams'])
+    if compress:
+        outfile = os.extsep.join([str(id_num), 'jamz'])
+    else:
+        outfile = os.extsep.join([str(id_num), 'jams'])
+
     outfile = os.path.join(output_dir, outfile)
 
     print 'Saving {:s}'.format(outfile)
     jam.save(outfile)
 
 
-def process_track(input_dir, output_dir, metadata, tags):
+def process_track(input_dir, output_dir, metadata, tags, compress):
 
 
     # Construct track metadata
     duration = get_track_duration(os.path.join(input_dir,
-                                               'mp3',
+                                               'audio',
                                                metadata['filename']))
 
     file_meta = jams.FileMetadata(title=metadata['title'],
@@ -75,10 +79,10 @@ def process_track(input_dir, output_dir, metadata, tags):
     jam.annotations.append(ann)
     jam.sandbox.content_path = metadata['filename']
 
-    save_jam(output_dir, jam, metadata.name)
+    save_jam(output_dir, jam, metadata.name, compress)
     
 
-def parse_cal10k(input_dir, output_dir):
+def parse_cal10k(input_dir=None, output_dir=None, compress=False):
     '''Convert CAL10K to jams format'''
 
     # First, get the song list
@@ -95,7 +99,8 @@ def parse_cal10k(input_dir, output_dir):
         process_track(input_dir,
                       output_dir,
                       metadata,
-                      tag_matrix.loc[song_id].dropna())
+                      tag_matrix.loc[song_id].dropna().index,
+                      compress)
 
 
 def parse_arguments(args):
@@ -109,6 +114,9 @@ def parse_arguments(args):
     parser.add_argument('output_dir',
                         type=str,
                         help='Path to output jam files')
+
+    parser.add_argument('-z', '--zip', dest='compress', 
+                        action='store_true', help='Compress jams output')
 
     return vars(parser.parse_args(args))
 
