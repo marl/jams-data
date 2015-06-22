@@ -3,6 +3,8 @@
 # CREATED:2015-06-22 13:05:41 by Brian McFee <brian.mcfee@nyu.edu>
 '''Parse CAL10K annotation data into JAMS format'''
 
+from __future__ import print_function
+
 import sys
 import argparse
 import os
@@ -96,11 +98,15 @@ def parse_cal10k(input_dir=None, output_dir=None, compress=False):
 
     # Finally, build out the JAMS list
     for song_id, metadata in songs.iterrows():
-        process_track(input_dir,
-                      output_dir,
-                      metadata,
-                      tag_matrix.loc[song_id].dropna().index,
-                      compress)
+        try:
+            process_track(input_dir,
+                          output_dir,
+                          metadata,
+                          tag_matrix.loc[song_id].dropna().index,
+                          compress)
+        except IOError as exc:
+            print('Could not process file: {:s}, skipping.'.format(songs['filename'][song_id]))
+
 
 
 def parse_arguments(args):
