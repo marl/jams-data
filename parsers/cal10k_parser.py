@@ -50,7 +50,7 @@ def save_jam(output_dir, jam, id_num, compress):
 
     outfile = os.path.join(output_dir, outfile)
 
-    print 'Saving {:s}'.format(outfile)
+    print('Saving {:s}'.format(outfile))
     jam.save(outfile)
 
 
