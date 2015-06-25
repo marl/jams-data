@@ -62,7 +62,7 @@ def fill_file_metadata(jam, kern_file, csv_file):
 
     # Assign metadata
     jam.file_metadata.artist = artist.strip("\n")
-    jam.file_metadata.duration = (first_onset + last_onset) / float(bpm)
+    jam.file_metadata.duration = onset_to_seconds(last_onset, first_onset, bpm)
     jam.file_metadata.title = title.strip("\n")
 
 
@@ -131,6 +131,26 @@ def find_in_csv(csv_file, occ_file):
     return start, end
 
 
+def onset_to_seconds(onset, upbeat_onset, bpm):
+    """Converts the given onset to its respective time in seconds.
+
+    Parameters
+    ----------
+    onset : float
+        Given onset to be converted.
+    upbeat_onset : float
+        Number of upbeat onsets (time offset to be added).
+    bpm : float
+        Beats per minute of the track.
+
+    Returns
+    -------
+    seconds : float
+        Time in seconds of the given onset.
+    """
+    return (upbeat_onset + onset) / float(bpm) * 60.0
+
+
 def parse_patterns(csv_file, kern_file, patterns, out_file):
     """Parses the set of patterns and saves the results into the output file.
 
@@ -178,9 +198,10 @@ def parse_patterns(csv_file, kern_file, patterns, out_file):
                         "occurrence_id": occ_n
                     }
                     # Transform onset to time
-                    time = (first_onset + float(file_reader[i][0])) / float(bpm)
-                    annot.data.add_observation(time=time,
-                                               duration=float(file_reader[i][3]),
+                    time = onset_to_seconds(float(file_reader[i][0]),
+                                            first_onset, bpm)
+                    dur = onset_to_seconds(float(file_reader[i][3]), 0, bpm)
+                    annot.data.add_observation(time=time, duration=dur,
                                                value=value)
             occ_n += 1
         pattern_n += 1
@@ -274,7 +295,7 @@ def process(jku_dir, out_dir):
     # For the patterns of one given file, parse them into a single file
     for csv_file, kern_file, patterns in zip(csv_files, kern_files,
                                              all_patterns):
-        logging.info("Parsing file %s" % os.path.basename(csv_file))
+        logging.info("Parsing file %s" % csv_file)
         out_file = get_out_file(patterns, out_dir)
         parse_patterns(csv_file, kern_file, patterns, out_file)
 
