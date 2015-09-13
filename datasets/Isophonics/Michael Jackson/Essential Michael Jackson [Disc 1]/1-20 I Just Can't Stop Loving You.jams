@@ -1,160 +1,104 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "TODO", 
-          "email": "TODO"
-        }, 
-        "validation": "TODO", 
-        "version": "1.0", 
-        "corpus": "Isophonics", 
-        "annotation_rules": "TODO", 
-        "data_source": "Centre for Digital Music"
-      }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 0.38
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 0.38, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "value": 0.38
-          }, 
-          "end": {
-            "value": 33.832
-          }, 
-          "label": {
-            "value": "intro"
-          }
+          "duration": 33.452, 
+          "confidence": 1.0, 
+          "value": "intro", 
+          "time": 0.38
         }, 
         {
-          "start": {
-            "value": 33.832
-          }, 
-          "end": {
-            "value": 72.302
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 38.47, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 33.832
         }, 
         {
-          "start": {
-            "value": 72.302
-          }, 
-          "end": {
-            "value": 110.623
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 38.321, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 72.302
         }, 
         {
-          "start": {
-            "value": 110.623
-          }, 
-          "end": {
-            "value": 129.79
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 19.167, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 110.623
         }, 
         {
-          "start": {
-            "value": 129.79
-          }, 
-          "end": {
-            "value": 134.617
-          }, 
-          "label": {
-            "value": "break"
-          }
+          "duration": 4.827, 
+          "confidence": 1.0, 
+          "value": "break", 
+          "time": 129.79
         }, 
         {
-          "start": {
-            "value": 134.617
-          }, 
-          "end": {
-            "value": 172.944
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 38.327, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 134.617
         }, 
         {
-          "start": {
-            "value": 172.944
-          }, 
-          "end": {
-            "value": 192.127
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 19.183, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 172.944
         }, 
         {
-          "start": {
-            "value": 192.127
-          }, 
-          "end": {
-            "value": 194.535
-          }, 
-          "label": {
-            "value": "break"
-          }
+          "duration": 2.408, 
+          "confidence": 1.0, 
+          "value": "break", 
+          "time": 192.127
         }, 
         {
-          "start": {
-            "value": 194.535
-          }, 
-          "end": {
-            "value": 213.698
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 19.163, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 194.535
         }, 
         {
-          "start": {
-            "value": 213.698
-          }, 
-          "end": {
-            "value": 250.82
-          }, 
-          "label": {
-            "value": "refrain_(fade-out)"
-          }
+          "duration": 37.122, 
+          "confidence": 1.0, 
+          "value": "refrain_(fade-out)", 
+          "time": 213.698
         }, 
         {
-          "start": {
-            "value": 250.82
-          }, 
-          "end": {
-            "value": 251.88
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 1.06, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 250.82
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "", 
+        "curator": {
+          "name": "Matthias Mauch", 
+          "email": "m.mauch@qmul.ac.uk"
+        }, 
+        "annotator": {}, 
+        "version": 1.0, 
+        "corpus": "Isophonics", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": ""
+      }, 
+      "namespace": "segment_open", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": {
-      "value": 251.88
-    }, 
+    "jams_version": "0.2.0", 
     "title": "1-20 I Just Can't Stop Loving You", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 251.88, 
     "artist": "Michael Jackson"
   }
 }

@@ -1,171 +1,110 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "TODO", 
-          "email": "TODO"
-        }, 
-        "validation": "TODO", 
-        "version": "1.0", 
-        "corpus": "Isophonics", 
-        "annotation_rules": "TODO", 
-        "data_source": "Centre for Digital Music"
-      }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 0.16
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 0.16, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "value": 0.16
-          }, 
-          "end": {
-            "value": 16.877
-          }, 
-          "label": {
-            "value": "intro"
-          }
+          "duration": 16.717, 
+          "confidence": 1.0, 
+          "value": "intro", 
+          "time": 0.16
         }, 
         {
-          "start": {
-            "value": 16.877
-          }, 
-          "end": {
-            "value": 32.58
-          }, 
-          "label": {
-            "value": "refraina"
-          }
+          "duration": 15.703, 
+          "confidence": 1.0, 
+          "value": "refraina", 
+          "time": 16.877
         }, 
         {
-          "start": {
-            "value": 32.58
-          }, 
-          "end": {
-            "value": 48.294
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 15.714, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 32.58
         }, 
         {
-          "start": {
-            "value": 48.294
-          }, 
-          "end": {
-            "value": 71.869
-          }, 
-          "label": {
-            "value": "refrainb"
-          }
+          "duration": 23.575, 
+          "confidence": 1.0, 
+          "value": "refrainb", 
+          "time": 48.294
         }, 
         {
-          "start": {
-            "value": 71.869
-          }, 
-          "end": {
-            "value": 87.572
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 15.703, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 71.869
         }, 
         {
-          "start": {
-            "value": 87.572
-          }, 
-          "end": {
-            "value": 103.285
-          }, 
-          "label": {
-            "value": "refraina"
-          }
+          "duration": 15.713, 
+          "confidence": 1.0, 
+          "value": "refraina", 
+          "time": 87.572
         }, 
         {
-          "start": {
-            "value": 103.285
-          }, 
-          "end": {
-            "value": 118.989
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 15.704, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 103.285
         }, 
         {
-          "start": {
-            "value": 118.989
-          }, 
-          "end": {
-            "value": 142.543
-          }, 
-          "label": {
-            "value": "break"
-          }
+          "duration": 23.554, 
+          "confidence": 1.0, 
+          "value": "break", 
+          "time": 118.989
         }, 
         {
-          "start": {
-            "value": 142.543
-          }, 
-          "end": {
-            "value": 158.251
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 15.708, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 142.543
         }, 
         {
-          "start": {
-            "value": 158.251
-          }, 
-          "end": {
-            "value": 197.518
-          }, 
-          "label": {
-            "value": "refrainc"
-          }
+          "duration": 39.267, 
+          "confidence": 1.0, 
+          "value": "refrainc", 
+          "time": 158.251
         }, 
         {
-          "start": {
-            "value": 197.518
-          }, 
-          "end": {
-            "value": 255.84
-          }, 
-          "label": {
-            "value": "outro"
-          }
+          "duration": 58.322, 
+          "confidence": 1.0, 
+          "value": "outro", 
+          "time": 197.518
         }, 
         {
-          "start": {
-            "value": 255.84
-          }, 
-          "end": {
-            "value": 257.4
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 1.56, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 255.84
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "", 
+        "curator": {
+          "name": "Matthias Mauch", 
+          "email": "m.mauch@qmul.ac.uk"
+        }, 
+        "annotator": {}, 
+        "version": 1.0, 
+        "corpus": "Isophonics", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": ""
+      }, 
+      "namespace": "segment_open", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": {
-      "value": 257.4
-    }, 
+    "jams_version": "0.2.0", 
     "title": "1-17 Wanna Be Startin' Somethin' (Single Version)", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 257.4, 
     "artist": "Michael Jackson"
   }
 }
