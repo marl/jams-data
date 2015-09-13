@@ -1,149 +1,98 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "TODO", 
-          "email": "TODO"
-        }, 
-        "validation": "TODO", 
-        "version": "1.0", 
-        "corpus": "Isophonics", 
-        "annotation_rules": "TODO", 
-        "data_source": "Centre for Digital Music"
-      }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 0.2
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 0.2, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "value": 0.2
-          }, 
-          "end": {
-            "value": 76.986
-          }, 
-          "label": {
-            "value": "intro"
-          }
+          "duration": 76.786, 
+          "confidence": 1.0, 
+          "value": "intro", 
+          "time": 0.2
         }, 
         {
-          "start": {
-            "value": 76.986
-          }, 
-          "end": {
-            "value": 92.729
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 15.743, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 76.986
         }, 
         {
-          "start": {
-            "value": 92.729
-          }, 
-          "end": {
-            "value": 108.453
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 15.724, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 92.729
         }, 
         {
-          "start": {
-            "value": 108.453
-          }, 
-          "end": {
-            "value": 124.201
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 15.748, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 108.453
         }, 
         {
-          "start": {
-            "value": 124.201
-          }, 
-          "end": {
-            "value": 139.933
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 15.732, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 124.201
         }, 
         {
-          "start": {
-            "value": 139.933
-          }, 
-          "end": {
-            "value": 195.049
-          }, 
-          "label": {
-            "value": "instrumental_solo"
-          }
+          "duration": 55.116, 
+          "confidence": 1.0, 
+          "value": "instrumental_solo", 
+          "time": 139.933
         }, 
         {
-          "start": {
-            "value": 195.049
-          }, 
-          "end": {
-            "value": 210.808
-          }, 
-          "label": {
-            "value": "break"
-          }
+          "duration": 15.759, 
+          "confidence": 1.0, 
+          "value": "break", 
+          "time": 195.049
         }, 
         {
-          "start": {
-            "value": 210.808
-          }, 
-          "end": {
-            "value": 226.512
-          }, 
-          "label": {
-            "value": "ad_lib"
-          }
+          "duration": 15.704, 
+          "confidence": 1.0, 
+          "value": "ad_lib", 
+          "time": 210.808
         }, 
         {
-          "start": {
-            "value": 226.512
-          }, 
-          "end": {
-            "value": 322.56
-          }, 
-          "label": {
-            "value": "outro"
-          }
+          "duration": 96.048, 
+          "confidence": 1.0, 
+          "value": "outro", 
+          "time": 226.512
         }, 
         {
-          "start": {
-            "value": 322.56
-          }, 
-          "end": {
-            "value": 322.667
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 0.107, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 322.56
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "", 
+        "curator": {
+          "name": "Matthias Mauch", 
+          "email": "m.mauch@qmul.ac.uk"
+        }, 
+        "annotator": {}, 
+        "version": 1.0, 
+        "corpus": "Isophonics", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": ""
+      }, 
+      "namespace": "segment_open", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": {
-      "value": 322.667
-    }, 
+    "jams_version": "0.2.0", 
     "title": "06 You Don't Fool Me", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 322.667, 
     "artist": "Queen"
   }
 }

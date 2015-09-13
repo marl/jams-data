@@ -1,171 +1,110 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "TODO", 
-          "email": "TODO"
-        }, 
-        "validation": "TODO", 
-        "version": "1.0", 
-        "corpus": "Isophonics", 
-        "annotation_rules": "TODO", 
-        "data_source": "Centre for Digital Music"
-      }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 0.505
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 0.505, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "value": 0.505
-          }, 
-          "end": {
-            "value": 7.555
-          }, 
-          "label": {
-            "value": "intro"
-          }
+          "duration": 7.05, 
+          "confidence": 1.0, 
+          "value": "intro", 
+          "time": 0.505
         }, 
         {
-          "start": {
-            "value": 7.555
-          }, 
-          "end": {
-            "value": 31.691
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 24.136, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 7.555
         }, 
         {
-          "start": {
-            "value": 31.691
-          }, 
-          "end": {
-            "value": 55.775
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 24.084, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 31.691
         }, 
         {
-          "start": {
-            "value": 55.775
-          }, 
-          "end": {
-            "value": 82.936
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 27.161, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 55.775
         }, 
         {
-          "start": {
-            "value": 82.936
-          }, 
-          "end": {
-            "value": 107.015
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 24.079, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 82.936
         }, 
         {
-          "start": {
-            "value": 107.015
-          }, 
-          "end": {
-            "value": 131.131
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 24.116, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 107.015
         }, 
         {
-          "start": {
-            "value": 131.131
-          }, 
-          "end": {
-            "value": 158.36
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 27.229, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 131.131
         }, 
         {
-          "start": {
-            "value": 158.36
-          }, 
-          "end": {
-            "value": 182.493
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 24.133, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 158.36
         }, 
         {
-          "start": {
-            "value": 182.493
-          }, 
-          "end": {
-            "value": 206.544
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 24.051, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 182.493
         }, 
         {
-          "start": {
-            "value": 206.544
-          }, 
-          "end": {
-            "value": 233.78
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 27.236, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 206.544
         }, 
         {
-          "start": {
-            "value": 233.78
-          }, 
-          "end": {
-            "value": 249.97
-          }, 
-          "label": {
-            "value": "outro"
-          }
+          "duration": 16.19, 
+          "confidence": 1.0, 
+          "value": "outro", 
+          "time": 233.78
         }, 
         {
-          "start": {
-            "value": 249.97
-          }, 
-          "end": {
-            "value": 251.333
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 1.363, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 249.97
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "", 
+        "curator": {
+          "name": "Matthias Mauch", 
+          "email": "m.mauch@qmul.ac.uk"
+        }, 
+        "annotator": {}, 
+        "version": 1.0, 
+        "corpus": "Isophonics", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": ""
+      }, 
+      "namespace": "segment_open", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": {
-      "value": 251.333
-    }, 
+    "jams_version": "0.2.0", 
     "title": "15 No-One But You", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 251.333, 
     "artist": "Queen"
   }
 }

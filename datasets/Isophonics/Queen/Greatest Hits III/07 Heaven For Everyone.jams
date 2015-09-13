@@ -1,171 +1,104 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "TODO", 
-          "email": "TODO"
-        }, 
-        "validation": "TODO", 
-        "version": "1.0", 
-        "corpus": "Isophonics", 
-        "annotation_rules": "TODO", 
-        "data_source": "Centre for Digital Music"
-      }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 1.495
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 1.495, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "value": 1.495
-          }, 
-          "end": {
-            "value": 25.651
-          }, 
-          "label": {
-            "value": "intro"
-          }
+          "duration": 24.156, 
+          "confidence": 1.0, 
+          "value": "intro", 
+          "time": 1.495
         }, 
         {
-          "start": {
-            "value": 25.651
-          }, 
-          "end": {
-            "value": 60.5
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 34.849, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 25.651
         }, 
         {
-          "start": {
-            "value": 60.5
-          }, 
-          "end": {
-            "value": 77.927
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 17.427, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 60.5
         }, 
         {
-          "start": {
-            "value": 77.927
-          }, 
-          "end": {
-            "value": 86.632
-          }, 
-          "label": {
-            "value": "break"
-          }
+          "duration": 8.705, 
+          "confidence": 1.0, 
+          "value": "break", 
+          "time": 77.927
         }, 
         {
-          "start": {
-            "value": 86.632
-          }, 
-          "end": {
-            "value": 121.485
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 34.853, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 86.632
         }, 
         {
-          "start": {
-            "value": 121.485
-          }, 
-          "end": {
-            "value": 156.318
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 34.833, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 121.485
         }, 
         {
-          "start": {
-            "value": 156.318
-          }, 
-          "end": {
-            "value": 169.371
-          }, 
-          "label": {
-            "value": "ad_lib"
-          }
+          "duration": 13.053, 
+          "confidence": 1.0, 
+          "value": "ad_lib", 
+          "time": 156.318
         }, 
         {
-          "start": {
-            "value": 169.371
-          }, 
-          "end": {
-            "value": 178.074
-          }, 
-          "label": {
-            "value": "break"
-          }
+          "duration": 8.703, 
+          "confidence": 1.0, 
+          "value": "break", 
+          "time": 169.371
         }, 
         {
-          "start": {
-            "value": 178.074
-          }, 
-          "end": {
-            "value": 195.493
-          }, 
-          "label": {
-            "value": "instrumental_solo"
-          }
+          "duration": 17.419, 
+          "confidence": 1.0, 
+          "value": "instrumental_solo", 
+          "time": 178.074
         }, 
         {
-          "start": {
-            "value": 195.493
-          }, 
-          "end": {
-            "value": 221.629
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 26.136, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 195.493
         }, 
         {
-          "start": {
-            "value": 221.629
-          }, 
-          "end": {
-            "value": 277.6
-          }, 
-          "label": {
-            "value": "outro"
-          }
-        }, 
-        {
-          "start": {
-            "value": 277.6
-          }, 
-          "end": {
-            "value": 277.6
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 55.971, 
+          "confidence": 1.0, 
+          "value": "outro", 
+          "time": 221.629
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "", 
+        "curator": {
+          "name": "Matthias Mauch", 
+          "email": "m.mauch@qmul.ac.uk"
+        }, 
+        "annotator": {}, 
+        "version": 1.0, 
+        "corpus": "Isophonics", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": ""
+      }, 
+      "namespace": "segment_open", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": {
-      "value": 277.6
-    }, 
+    "jams_version": "0.2.0", 
     "title": "07 Heaven For Everyone", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 277.6, 
     "artist": "Queen"
   }
 }

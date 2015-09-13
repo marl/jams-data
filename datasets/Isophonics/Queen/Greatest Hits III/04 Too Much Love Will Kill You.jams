@@ -1,171 +1,110 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "TODO", 
-          "email": "TODO"
-        }, 
-        "validation": "TODO", 
-        "version": "1.0", 
-        "corpus": "Isophonics", 
-        "annotation_rules": "TODO", 
-        "data_source": "Centre for Digital Music"
-      }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 0.195
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 0.195, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "value": 0.195
-          }, 
-          "end": {
-            "value": 13.359
-          }, 
-          "label": {
-            "value": "intro"
-          }
+          "duration": 13.164, 
+          "confidence": 1.0, 
+          "value": "intro", 
+          "time": 0.195
         }, 
         {
-          "start": {
-            "value": 13.359
-          }, 
-          "end": {
-            "value": 39.618
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 26.259, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 13.359
         }, 
         {
-          "start": {
-            "value": 39.618
-          }, 
-          "end": {
-            "value": 65.916
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 26.298, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 39.618
         }, 
         {
-          "start": {
-            "value": 65.916
-          }, 
-          "end": {
-            "value": 88.984
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 23.068, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 65.916
         }, 
         {
-          "start": {
-            "value": 88.984
-          }, 
-          "end": {
-            "value": 102.128
-          }, 
-          "label": {
-            "value": "breaka"
-          }
+          "duration": 13.144, 
+          "confidence": 1.0, 
+          "value": "breaka", 
+          "time": 88.984
         }, 
         {
-          "start": {
-            "value": 102.128
-          }, 
-          "end": {
-            "value": 128.412
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 26.284, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 102.128
         }, 
         {
-          "start": {
-            "value": 128.412
-          }, 
-          "end": {
-            "value": 154.646
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 26.234, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 128.412
         }, 
         {
-          "start": {
-            "value": 154.646
-          }, 
-          "end": {
-            "value": 177.729
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 23.083, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 154.646
         }, 
         {
-          "start": {
-            "value": 177.729
-          }, 
-          "end": {
-            "value": 184.309
-          }, 
-          "label": {
-            "value": "breakb"
-          }
+          "duration": 6.58, 
+          "confidence": 1.0, 
+          "value": "breakb", 
+          "time": 177.729
         }, 
         {
-          "start": {
-            "value": 184.309
-          }, 
-          "end": {
-            "value": 210.616
-          }, 
-          "label": {
-            "value": "verse_(instrumental_solo)"
-          }
+          "duration": 26.307, 
+          "confidence": 1.0, 
+          "value": "verse_(instrumental_solo)", 
+          "time": 184.309
         }, 
         {
-          "start": {
-            "value": 210.616
-          }, 
-          "end": {
-            "value": 257.73
-          }, 
-          "label": {
-            "value": "refrain_(with_complete_ending)"
-          }
+          "duration": 47.114, 
+          "confidence": 1.0, 
+          "value": "refrain_(with_complete_ending)", 
+          "time": 210.616
         }, 
         {
-          "start": {
-            "value": 257.73
-          }, 
-          "end": {
-            "value": 258.8
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 1.07, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 257.73
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "", 
+        "curator": {
+          "name": "Matthias Mauch", 
+          "email": "m.mauch@qmul.ac.uk"
+        }, 
+        "annotator": {}, 
+        "version": 1.0, 
+        "corpus": "Isophonics", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": ""
+      }, 
+      "namespace": "segment_open", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": {
-      "value": 258.8
-    }, 
+    "jams_version": "0.2.0", 
     "title": "04 Too Much Love Will Kill You", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 258.8, 
     "artist": "Queen"
   }
 }

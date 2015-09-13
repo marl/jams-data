@@ -1,193 +1,122 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "TODO", 
-          "email": "TODO"
-        }, 
-        "validation": "TODO", 
-        "version": "1.0", 
-        "corpus": "Isophonics", 
-        "annotation_rules": "TODO", 
-        "data_source": "Centre for Digital Music"
-      }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 0.465
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 0.465, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "value": 0.465
-          }, 
-          "end": {
-            "value": 10.477
-          }, 
-          "label": {
-            "value": "intro"
-          }
+          "duration": 10.012, 
+          "confidence": 1.0, 
+          "value": "intro", 
+          "time": 0.465
         }, 
         {
-          "start": {
-            "value": 10.477
-          }, 
-          "end": {
-            "value": 37.15
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 26.673, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 10.477
         }, 
         {
-          "start": {
-            "value": 37.15
-          }, 
-          "end": {
-            "value": 63.829
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 26.679, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 37.15
         }, 
         {
-          "start": {
-            "value": 63.829
-          }, 
-          "end": {
-            "value": 77.104
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 13.275, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 63.829
         }, 
         {
-          "start": {
-            "value": 77.104
-          }, 
-          "end": {
-            "value": 93.833
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 16.729, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 77.104
         }, 
         {
-          "start": {
-            "value": 93.833
-          }, 
-          "end": {
-            "value": 112.188
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 18.355, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 93.833
         }, 
         {
-          "start": {
-            "value": 112.188
-          }, 
-          "end": {
-            "value": 118.834
-          }, 
-          "label": {
-            "value": "break"
-          }
+          "duration": 6.646, 
+          "confidence": 1.0, 
+          "value": "break", 
+          "time": 112.188
         }, 
         {
-          "start": {
-            "value": 118.834
-          }, 
-          "end": {
-            "value": 132.151
-          }, 
-          "label": {
-            "value": "verse"
-          }
+          "duration": 13.317, 
+          "confidence": 1.0, 
+          "value": "verse", 
+          "time": 118.834
         }, 
         {
-          "start": {
-            "value": 132.151
-          }, 
-          "end": {
-            "value": 145.496
-          }, 
-          "label": {
-            "value": "bridge"
-          }
+          "duration": 13.345, 
+          "confidence": 1.0, 
+          "value": "bridge", 
+          "time": 132.151
         }, 
         {
-          "start": {
-            "value": 145.496
-          }, 
-          "end": {
-            "value": 162.159
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 16.663, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 145.496
         }, 
         {
-          "start": {
-            "value": 162.159
-          }, 
-          "end": {
-            "value": 213.89
-          }, 
-          "label": {
-            "value": "instrumental_solo"
-          }
+          "duration": 51.731, 
+          "confidence": 1.0, 
+          "value": "instrumental_solo", 
+          "time": 162.159
         }, 
         {
-          "start": {
-            "value": 213.89
-          }, 
-          "end": {
-            "value": 230.567
-          }, 
-          "label": {
-            "value": "refrain"
-          }
+          "duration": 16.677, 
+          "confidence": 1.0, 
+          "value": "refrain", 
+          "time": 213.89
         }, 
         {
-          "start": {
-            "value": 230.567
-          }, 
-          "end": {
-            "value": 270.9
-          }, 
-          "label": {
-            "value": "outro"
-          }
+          "duration": 40.333, 
+          "confidence": 1.0, 
+          "value": "outro", 
+          "time": 230.567
         }, 
         {
-          "start": {
-            "value": 270.9
-          }, 
-          "end": {
-            "value": 273.227
-          }, 
-          "label": {
-            "value": "silence"
-          }
+          "duration": 2.327, 
+          "confidence": 1.0, 
+          "value": "silence", 
+          "time": 270.9
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "", 
+        "curator": {
+          "name": "Matthias Mauch", 
+          "email": "m.mauch@qmul.ac.uk"
+        }, 
+        "annotator": {}, 
+        "version": 1.0, 
+        "corpus": "Isophonics", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": ""
+      }, 
+      "namespace": "segment_open", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": {
-      "value": 273.227
-    }, 
+    "jams_version": "0.2.0", 
     "title": "10 Headlong", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 273.227, 
     "artist": "Queen"
   }
 }
