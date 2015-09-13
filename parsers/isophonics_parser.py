@@ -28,9 +28,7 @@ __email__ = "oriol@nyu.edu"
 
 import argparse
 import logging
-import numpy as np
 import os
-import pandas as pd
 import time
 
 import jams
@@ -43,9 +41,9 @@ ISO_ATTRS = {'beat': 'beat',
 
 # Namespace dictionary
 NS_DICT = {'beat': 'beat',
-           'chord': 'chord_harte',
+           'chord': 'chord',
            'key': 'key_mode',
-           'segment': 'segment_isophonics'}
+           'segment': 'segment_open'}
 
 # Map chords that don't make much sense
 CHORDS_DICT = {
