@@ -1,1480 +1,721 @@
 {
-  "segment": [
+  "sandbox": {}, 
+  "annotations": [
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "3", 
-          "email": "TODO"
-        }, 
-        "version": "1.2", 
-        "corpus": "SALAMI", 
-        "annotation_rules": "TODO", 
-        "data_source": "Codaich"
-      }, 
       "data": [
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.0
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 0.049342403
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Silence"
-          }
+          "duration": 0.049342, 
+          "confidence": null, 
+          "value": "silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.049342403
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 3.979659863
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Intro"
-          }
+          "duration": 3.930317, 
+          "confidence": null, 
+          "value": "intro", 
+          "time": 0.049342
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 3.979659863
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 17.621043083
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.641383, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 3.97966
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 17.621043083
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 37.907414965
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.286372, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 17.621043
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 37.907414965
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 51.588344671
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.68093, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 37.907415
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 51.588344671
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 71.980340136
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.391995, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 51.588345
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 71.980340136
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 85.840748299
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.860408, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 71.98034
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 85.840748299
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 106.396848072
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.5561, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 85.840748
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 106.396848072
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 120.204512471
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.807664, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 106.396848
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 120.204512471
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 140.707913832
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.503401, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 120.204512
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 140.707913832
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.628276643
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Fade-out"
-          }
+          "duration": 6.920363, 
+          "confidence": null, 
+          "value": "fade-out", 
+          "time": 140.707914
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 147.628276643
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.808367346
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.0
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 0.049342403
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.049342403
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 3.979659863
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "I"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 3.979659863
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 17.621043083
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "A"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 17.621043083
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 37.907414965
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 37.907414965
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 51.588344671
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "A"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 51.588344671
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 71.980340136
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 71.980340136
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 85.840748299
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "A"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 85.840748299
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 106.396848072
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 106.396848072
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 120.204512471
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "A"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 120.204512471
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 140.707913832
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 140.707913832
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.628276643
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 147.628276643
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.808367346
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.0
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 0.049342403
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.049342403
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 3.979659863
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "i"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 3.979659863
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 10.771405895
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "a"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 10.771405895
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 17.621043083
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 17.621043083
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 24.403514739
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 24.403514739
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 31.059478458
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 31.059478458
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 37.907414965
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 37.907414965
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 44.675623582
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "a"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 44.675623582
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 51.588344671
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 51.588344671
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 58.336712018
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 58.336712018
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 65.155804988
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 65.155804988
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 71.980340136
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 71.980340136
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 78.77941043
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "a"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 78.77941043
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 85.840748299
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 85.840748299
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 92.673809523
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 92.673809523
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 99.531360544
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 99.531360544
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 106.396848072
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 106.396848072
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 113.243832199
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "a"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 113.243832199
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 120.204512471
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 120.204512471
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 127.060408163
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 127.060408163
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 133.899297052
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 133.899297052
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 140.707913832
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 140.707913832
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.628276643
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 147.628276643
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.808367346
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "Silence"
-          }
+          "duration": 0.180091, 
+          "confidence": null, 
+          "value": "silence", 
+          "time": 147.628277
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "Sonic Visualizer", 
+        "curator": {
+          "name": "Jordan Smith", 
+          "email": "jblsmith@gmail.com"
+        }, 
+        "annotator": {
+          "submission_date": "2010-08-01", 
+          "name": "3"
+        }, 
+        "version": "2.0", 
+        "corpus": "SALAMI", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": "Codaich"
+      }, 
+      "namespace": "segment_salami_function", 
+      "sandbox": {}
     }, 
     {
-      "annotation_metadata": {
-        "annotation_tools": "Sonic Visualizer", 
-        "annotator": {
-          "name": "9", 
-          "email": "TODO"
-        }, 
-        "version": "1.2", 
-        "corpus": "SALAMI", 
-        "annotation_rules": "TODO", 
-        "data_source": "Codaich"
-      }, 
       "data": [
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.0
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 0.65015873
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Silence"
-          }
+          "duration": 0.049342, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 0.0
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.65015873
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 4.029047619
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Intro"
-          }
+          "duration": 3.930317, 
+          "confidence": null, 
+          "value": "I", 
+          "time": 0.049342
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 4.029047619
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 17.570226757
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.641383, 
+          "confidence": null, 
+          "value": "A", 
+          "time": 3.97966
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 17.570226757
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 37.895918367
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.286372, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 17.621043
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 37.895918367
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 51.694331065
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.68093, 
+          "confidence": null, 
+          "value": "A", 
+          "time": 37.907415
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 51.694331065
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 72.028299319
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.391995, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 51.588345
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 72.028299319
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 85.76956916
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.860408, 
+          "confidence": null, 
+          "value": "A", 
+          "time": 71.98034
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 85.76956916
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 106.366031746
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.5561, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 85.840748
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 106.366031746
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 120.231791383
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Verse"
-          }
+          "duration": 13.807664, 
+          "confidence": null, 
+          "value": "A", 
+          "time": 106.396848
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 120.231791383
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 140.663469387
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Chorus"
-          }
+          "duration": 20.503401, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 120.204512
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 140.663469387
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.568979591
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Outro"
-          }
+          "duration": 6.920363, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 140.707914
         }, 
         {
-          "start": {
-            "confidence": 1.0, 
-            "value": 147.568979591
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.815532879
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "function", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.0
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 0.65015873
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.65015873
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 4.029047619
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "A"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 4.029047619
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 17.570226757
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "B"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 17.570226757
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 37.895918367
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 37.895918367
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 51.694331065
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "B"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 51.694331065
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 72.028299319
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 72.028299319
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 85.76956916
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "B"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 85.76956916
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 106.366031746
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 106.366031746
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 120.231791383
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "B"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 120.231791383
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 140.663469387
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 140.663469387
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.568979591
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "C"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 147.568979591
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.815532879
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "large_scale", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.0
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 0.65015873
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "Silence"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 0.65015873
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 4.029047619
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "a"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 4.029047619
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 10.723015873
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 10.723015873
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 17.570226757
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b'"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 17.570226757
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 24.358049886
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 24.358049886
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 31.137959183
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 31.137959183
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 37.895918367
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 37.895918367
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 44.568707482
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 44.568707482
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 51.694331065
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b'"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 51.694331065
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 58.386984126
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 58.386984126
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 65.224852607
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 65.224852607
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 72.028299319
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 72.028299319
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 78.899433106
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 78.899433106
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 85.76956916
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b'"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 85.76956916
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 92.730702947
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 92.730702947
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 99.480839002
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 99.480839002
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 106.366031746
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 106.366031746
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 113.161768707
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 113.161768707
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 120.231791383
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "b'"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 120.231791383
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 127.107891156
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 127.107891156
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 133.944240362
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "d"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 133.944240362
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 140.663469387
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "e"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 140.663469387
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.568979591
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "c"
-          }
-        }, 
-        {
-          "start": {
-            "confidence": 1.0, 
-            "value": 147.568979591
-          }, 
-          "end": {
-            "confidence": 1.0, 
-            "value": 147.815532879
-          }, 
-          "label": {
-            "confidence": 1.0, 
-            "secondary_value": "small_scale", 
-            "value": "Silence"
-          }
+          "duration": 0.180091, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 147.628277
         }
-      ]
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "Sonic Visualizer", 
+        "curator": {
+          "name": "Jordan Smith", 
+          "email": "jblsmith@gmail.com"
+        }, 
+        "annotator": {
+          "submission_date": "2010-08-01", 
+          "name": "3"
+        }, 
+        "version": "2.0", 
+        "corpus": "SALAMI", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": "Codaich"
+      }, 
+      "namespace": "segment_salami_upper", 
+      "sandbox": {}
+    }, 
+    {
+      "data": [
+        {
+          "duration": 0.049342, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 0.0
+        }, 
+        {
+          "duration": 3.930317, 
+          "confidence": null, 
+          "value": "i", 
+          "time": 0.049342
+        }, 
+        {
+          "duration": 6.791746, 
+          "confidence": null, 
+          "value": "a", 
+          "time": 3.97966
+        }, 
+        {
+          "duration": 6.849637, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 10.771406
+        }, 
+        {
+          "duration": 6.782472, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 17.621043
+        }, 
+        {
+          "duration": 6.655964, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 24.403515
+        }, 
+        {
+          "duration": 6.847937, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 31.059478
+        }, 
+        {
+          "duration": 6.768209, 
+          "confidence": null, 
+          "value": "a", 
+          "time": 37.907415
+        }, 
+        {
+          "duration": 6.912721, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 44.675624
+        }, 
+        {
+          "duration": 6.748367, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 51.588345
+        }, 
+        {
+          "duration": 6.819093, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 58.336712
+        }, 
+        {
+          "duration": 6.824535, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 65.155805
+        }, 
+        {
+          "duration": 6.79907, 
+          "confidence": null, 
+          "value": "a", 
+          "time": 71.98034
+        }, 
+        {
+          "duration": 7.061338, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 78.77941
+        }, 
+        {
+          "duration": 6.833061, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 85.840748
+        }, 
+        {
+          "duration": 6.857551, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 92.67381
+        }, 
+        {
+          "duration": 6.865488, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 99.531361
+        }, 
+        {
+          "duration": 6.846984, 
+          "confidence": null, 
+          "value": "a", 
+          "time": 106.396848
+        }, 
+        {
+          "duration": 6.96068, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 113.243832
+        }, 
+        {
+          "duration": 6.855896, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 120.204512
+        }, 
+        {
+          "duration": 6.838889, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 127.060408
+        }, 
+        {
+          "duration": 6.808617, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 133.899297
+        }, 
+        {
+          "duration": 6.920363, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 140.707914
+        }, 
+        {
+          "duration": 0.180091, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 147.628277
+        }
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "Sonic Visualizer", 
+        "curator": {
+          "name": "Jordan Smith", 
+          "email": "jblsmith@gmail.com"
+        }, 
+        "annotator": {
+          "submission_date": "2010-08-01", 
+          "name": "3"
+        }, 
+        "version": "2.0", 
+        "corpus": "SALAMI", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": "Codaich"
+      }, 
+      "namespace": "segment_salami_lower", 
+      "sandbox": {}
+    }, 
+    {
+      "data": [
+        {
+          "duration": 0.650159, 
+          "confidence": null, 
+          "value": "silence", 
+          "time": 0.0
+        }, 
+        {
+          "duration": 3.378889, 
+          "confidence": null, 
+          "value": "intro", 
+          "time": 0.650159
+        }, 
+        {
+          "duration": 13.541179, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 4.029048
+        }, 
+        {
+          "duration": 20.325692, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 17.570227
+        }, 
+        {
+          "duration": 13.798413, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 37.895918
+        }, 
+        {
+          "duration": 20.333968, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 51.694331
+        }, 
+        {
+          "duration": 13.74127, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 72.028299
+        }, 
+        {
+          "duration": 20.596463, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 85.769569
+        }, 
+        {
+          "duration": 13.86576, 
+          "confidence": null, 
+          "value": "verse", 
+          "time": 106.366032
+        }, 
+        {
+          "duration": 20.431678, 
+          "confidence": null, 
+          "value": "chorus", 
+          "time": 120.231791
+        }, 
+        {
+          "duration": 6.90551, 
+          "confidence": null, 
+          "value": "outro", 
+          "time": 140.663469
+        }, 
+        {
+          "duration": 0.246553, 
+          "confidence": null, 
+          "value": "silence", 
+          "time": 147.56898
+        }
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "Sonic Visualizer", 
+        "curator": {
+          "name": "Jordan Smith", 
+          "email": "jblsmith@gmail.com"
+        }, 
+        "annotator": {
+          "submission_date": "2010-08-31", 
+          "name": "9"
+        }, 
+        "version": "2.0", 
+        "corpus": "SALAMI", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": "Codaich"
+      }, 
+      "namespace": "segment_salami_function", 
+      "sandbox": {}
+    }, 
+    {
+      "data": [
+        {
+          "duration": 0.650159, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 0.0
+        }, 
+        {
+          "duration": 3.378889, 
+          "confidence": null, 
+          "value": "A", 
+          "time": 0.650159
+        }, 
+        {
+          "duration": 13.541179, 
+          "confidence": null, 
+          "value": "B", 
+          "time": 4.029048
+        }, 
+        {
+          "duration": 20.325692, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 17.570227
+        }, 
+        {
+          "duration": 13.798413, 
+          "confidence": null, 
+          "value": "B", 
+          "time": 37.895918
+        }, 
+        {
+          "duration": 20.333968, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 51.694331
+        }, 
+        {
+          "duration": 13.74127, 
+          "confidence": null, 
+          "value": "B", 
+          "time": 72.028299
+        }, 
+        {
+          "duration": 20.596463, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 85.769569
+        }, 
+        {
+          "duration": 13.86576, 
+          "confidence": null, 
+          "value": "B", 
+          "time": 106.366032
+        }, 
+        {
+          "duration": 20.431678, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 120.231791
+        }, 
+        {
+          "duration": 6.90551, 
+          "confidence": null, 
+          "value": "C", 
+          "time": 140.663469
+        }, 
+        {
+          "duration": 0.246553, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 147.56898
+        }
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "Sonic Visualizer", 
+        "curator": {
+          "name": "Jordan Smith", 
+          "email": "jblsmith@gmail.com"
+        }, 
+        "annotator": {
+          "submission_date": "2010-08-31", 
+          "name": "9"
+        }, 
+        "version": "2.0", 
+        "corpus": "SALAMI", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": "Codaich"
+      }, 
+      "namespace": "segment_salami_upper", 
+      "sandbox": {}
+    }, 
+    {
+      "data": [
+        {
+          "duration": 0.650159, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 0.0
+        }, 
+        {
+          "duration": 3.378889, 
+          "confidence": null, 
+          "value": "a", 
+          "time": 0.650159
+        }, 
+        {
+          "duration": 6.693968, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 4.029048
+        }, 
+        {
+          "duration": 6.847211, 
+          "confidence": null, 
+          "value": "b'", 
+          "time": 10.723016
+        }, 
+        {
+          "duration": 6.787823, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 17.570227
+        }, 
+        {
+          "duration": 6.779909, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 24.35805
+        }, 
+        {
+          "duration": 6.757959, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 31.137959
+        }, 
+        {
+          "duration": 6.672789, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 37.895918
+        }, 
+        {
+          "duration": 7.125624, 
+          "confidence": null, 
+          "value": "b'", 
+          "time": 44.568707
+        }, 
+        {
+          "duration": 6.692653, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 51.694331
+        }, 
+        {
+          "duration": 6.837868, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 58.386984
+        }, 
+        {
+          "duration": 6.803447, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 65.224853
+        }, 
+        {
+          "duration": 6.871134, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 72.028299
+        }, 
+        {
+          "duration": 6.870136, 
+          "confidence": null, 
+          "value": "b'", 
+          "time": 78.899433
+        }, 
+        {
+          "duration": 6.961134, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 85.769569
+        }, 
+        {
+          "duration": 6.750136, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 92.730703
+        }, 
+        {
+          "duration": 6.885193, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 99.480839
+        }, 
+        {
+          "duration": 6.795737, 
+          "confidence": null, 
+          "value": "b", 
+          "time": 106.366032
+        }, 
+        {
+          "duration": 7.070023, 
+          "confidence": null, 
+          "value": "b'", 
+          "time": 113.161769
+        }, 
+        {
+          "duration": 6.8761, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 120.231791
+        }, 
+        {
+          "duration": 6.836349, 
+          "confidence": null, 
+          "value": "d", 
+          "time": 127.107891
+        }, 
+        {
+          "duration": 6.719229, 
+          "confidence": null, 
+          "value": "e", 
+          "time": 133.94424
+        }, 
+        {
+          "duration": 6.90551, 
+          "confidence": null, 
+          "value": "c", 
+          "time": 140.663469
+        }, 
+        {
+          "duration": 0.246553, 
+          "confidence": null, 
+          "value": "Silence", 
+          "time": 147.56898
+        }
+      ], 
+      "annotation_metadata": {
+        "annotation_tools": "Sonic Visualizer", 
+        "curator": {
+          "name": "Jordan Smith", 
+          "email": "jblsmith@gmail.com"
+        }, 
+        "annotator": {
+          "submission_date": "2010-08-31", 
+          "name": "9"
+        }, 
+        "version": "2.0", 
+        "corpus": "SALAMI", 
+        "annotation_rules": "", 
+        "validation": "", 
+        "data_source": "Codaich"
+      }, 
+      "namespace": "segment_salami_lower", 
+      "sandbox": {}
     }
   ], 
   "file_metadata": {
-    "duration": 147.0, 
+    "jams_version": "0.2.0", 
     "title": "Don__t_You_Just_Know_It", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 147.81553300000002, 
     "artist": "Compilations"
   }
 }
