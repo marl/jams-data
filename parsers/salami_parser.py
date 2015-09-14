@@ -17,7 +17,6 @@ import csv
 import logging
 import numpy as np
 import os
-import sys
 import time
 
 import jams
@@ -217,8 +216,9 @@ def create_JAMS(in_dir, metadata, out_file):
     # Create Annotations if they exist
     # Maximum 3 annotations per file
     for annotation_id in range(1, 4):
-        if os.path.isfile(
-            os.path.join(path, "textfile" + str(annotation_id) + ".txt")):
+        if os.path.isfile(os.path.join(path,
+                                       "textfile" + str(annotation_id) +
+                                       ".txt")):
             create_annotations(jam, path, annotation_id, metadata)
 
     # Get the duration from the annotations
@@ -242,7 +242,7 @@ def process(in_dir, out_dir):
     # Open CSV with metadata
     with open(os.path.join(in_dir, "metadata", "metadata.csv")) as fh:
         csv_reader = csv.reader(fh)
-        for i, metadata in enumerate(csv_reader):
+        for i, metadata in list(enumerate(csv_reader)):
             if metadata[0] == "SONG_ID":
                 continue
             # Create a JAMS file for this track
