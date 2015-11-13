@@ -51,7 +51,7 @@ def smc_annotation(ann_file):
     for beat_time in data:
         annotation.data.add_observation(time=beat_time,
                                         duration=0,
-                                        value=1,
+                                        value=None,
                                         confidence=None)
 
     return annotation
