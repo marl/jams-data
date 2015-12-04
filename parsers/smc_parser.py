@@ -3,6 +3,8 @@
 # CREATED:2015-02-01 15:35:38 by Brian McFee <brian.mcfee@nyu.edu>
 '''Parse SMC2 beat tracking data into JAMS format.'''
 
+from __future__ import print_function
+
 import sys
 import argparse
 import os
@@ -51,7 +53,7 @@ def smc_annotation(ann_file):
     for beat_time in data:
         annotation.data.add_observation(time=beat_time,
                                         duration=0,
-                                        value=1,
+                                        value=None,
                                         confidence=None)
 
     return annotation
@@ -117,7 +119,7 @@ def save_jam(output_dir, jam):
     outfile = os.extsep.join([jam.file_metadata.title, 'jams'])
     outfile = os.path.join(output_dir, outfile)
 
-    print 'Saving {:s}'.format(outfile)
+    print('Saving {:s}'.format(outfile))
     jam.save(outfile)
 
 
