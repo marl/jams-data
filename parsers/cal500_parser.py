@@ -22,6 +22,10 @@ ARTIST_MAP = {'chi': 'chi-lites',
               'go': 'go-gos',
               'sir_mix': 'sir_mix-a-lot'}
 
+REPLACEMENTS = {'NOT-Emotion-Angry_/_Agressive': 'NOT-Emotion-Angry_/_Aggressive',
+                'Emotion-Angry_/_Agressive': 'Emotion-Angry_/_Aggressive'}
+
+
 def get_track_duration(filename):
     '''Get the track duration for a filename'''
     with audioread.audio_open(filename) as fdesc:
@@ -38,6 +42,8 @@ def load_tags(input_dir, songs):
     vocab = pd.read_table(os.path.join(input_dir, 'vocab.txt'),
                          header=None,
                          names=['tag'])
+    
+    vocab['tag'] = vocab['tag'].apply(lambda x: REPLACEMENTS.get(x, x))
 
     tags.columns = vocab['tag']
 
