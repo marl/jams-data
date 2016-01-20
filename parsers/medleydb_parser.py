@@ -25,6 +25,8 @@ import time
 import yaml
 import pandas as pd
 
+from tqdm import tqdm
+
 import jams
 
 from medleydb import __version__ as VERSION
@@ -95,14 +97,14 @@ def fill_melody_annotation(annot_fpath, mel_type):
     """Fill a melody annotation with data from annot_fpath."""
 
     ann = jams.Annotation(namespace='pitch_hz')
-    df = pd.read_csv(annot_fpath, header=None, names=['time', 'frequency'])
+    df = pd.read_csv(annot_fpath, header=None, names=['time', 'value'])
+    df['duration'] = 0.0
+    df['confidence'] = None
 
-    for _, record in df.iterrows():
-        ann.append(time=record['time'],
-                   duration=0.0,
-                   value=record['frequency'])
     ann.time = 0.0
     ann.duration = df['time'].max()
+
+    ann.data = jams.JamsFrame.from_dataframe(df)
 
     fill_melody_annotation_metadata(ann, mel_type)
 
@@ -156,8 +158,8 @@ def create_JAMS(dataset_dir, trackid, out_file):
 
     if os.path.exists(instid_fpath):
         jam.annotations.append(fill_instid_annotation(instid_fpath))
-        
-    # Get the track duration 
+
+    # Get the track duration
     duration = jam.annotations[-1].duration
 
     # Global file metadata
@@ -172,12 +174,12 @@ def process(in_dir, out_dir):
     them in the out_dir folder."""
 
     # Collect all trackid's.
-    yaml_files = jams.util.find_with_extension(os.path.join(in_dir, 'Audio'), 'yaml')
+    yaml_files = jams.util.find_with_extension(os.path.join(in_dir, 'Metadata'), 'yaml')
     trackids = [jams.util.filebase(y).replace("_METADATA", "") for y in yaml_files]
 
     jams.util.smkdirs(out_dir)
 
-    for trackid in trackids:
+    for trackid in tqdm(trackids):
         jams_file = os.path.join(out_dir, "{:s}.jams".format(trackid))
         #Create a JAMS file for this track
         create_JAMS(in_dir, trackid, jams_file)
