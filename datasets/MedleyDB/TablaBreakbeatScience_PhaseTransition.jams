@@ -1,1528 +1,871 @@
 {
-  "genre": [
+  "sandbox": {}, 
+  "annotations": [
     {
+      "namespace": "tag_open", 
+      "sandbox": {}, 
+      "time": 0, 
+      "duration": null, 
       "annotation_metadata": {
-        "data_source": "Manual Annotation", 
-        "corpus": "MedleyDB", 
-        "version": "1.0", 
+        "annotation_tools": "", 
         "curator": {
           "name": "Rachel Bittner", 
           "email": "rachel.bittner@nyu.edu"
         }, 
-        "validation": "None"
+        "annotator": {}, 
+        "version": "1.1", 
+        "corpus": "MedleyDB", 
+        "annotation_rules": "", 
+        "validation": "None", 
+        "data_source": "Manual Annotation"
       }, 
       "data": [
         {
-          "confidence": 1, 
-          "value": "Electronic/Fusion"
+          "duration": 0.0, 
+          "confidence": null, 
+          "value": "Electronic/Fusion", 
+          "time": 0.0
         }
       ]
-    }
-  ], 
-  "source": [
+    }, 
     {
+      "namespace": "tag_medleydb_instruments", 
+      "sandbox": {}, 
+      "time": 0.0, 
+      "duration": 490.54480000000001, 
       "annotation_metadata": {
-        "data_source": "Automatic Annotation", 
-        "corpus": "MedleyDB", 
-        "version": "1.0", 
+        "annotation_tools": "", 
         "curator": {
           "name": "Juan P. Bello", 
           "email": "jpbello@nyu.edu"
         }, 
-        "validation": "None"
+        "annotator": {}, 
+        "version": "1.1", 
+        "corpus": "MedleyDB", 
+        "annotation_rules": "", 
+        "validation": "None", 
+        "data_source": "Automatic Annotation"
       }, 
       "data": [
         {
-          "start": {
-            "value": 0.0
-          }, 
-          "end": {
-            "value": 21.5946
-          }, 
-          "label": {
-            "value": "drum machine"
-          }
-        }, 
-        {
-          "start": {
-            "value": 23.8701
-          }, 
-          "end": {
-            "value": 144.8461
-          }, 
-          "label": {
-            "value": "drum machine"
-          }
-        }, 
-        {
-          "start": {
-            "value": 168.2518
-          }, 
-          "end": {
-            "value": 361.5811
-          }, 
-          "label": {
-            "value": "drum machine"
-          }
-        }, 
-        {
-          "start": {
-            "value": 384.9868
-          }, 
-          "end": {
-            "value": 457.7117
-          }, 
-          "label": {
-            "value": "drum machine"
-          }
-        }, 
-        {
-          "start": {
-            "value": 10.031
-          }, 
-          "end": {
-            "value": 10.4025
-          }, 
-          "label": {
-            "value": "fx/processed sound"
-          }
-        }, 
-        {
-          "start": {
-            "value": 14.3035
-          }, 
-          "end": {
-            "value": 477.6345
-          }, 
-          "label": {
-            "value": "fx/processed sound"
-          }
-        }, 
-        {
-          "start": {
-            "value": 10.2632
-          }, 
-          "end": {
-            "value": 12.4459
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 14.0249
-          }, 
-          "end": {
-            "value": 15.3252
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 17.0434
-          }, 
-          "end": {
-            "value": 18.3902
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 20.062
-          }, 
-          "end": {
-            "value": 21.3624
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 22.3376
-          }, 
-          "end": {
-            "value": 24.6596
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 32.09
-          }, 
-          "end": {
-            "value": 33.4367
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 35.0621
-          }, 
-          "end": {
-            "value": 36.5946
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 38.0807
-          }, 
-          "end": {
-            "value": 39.4739
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 41.1458
-          }, 
-          "end": {
-            "value": 42.4925
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 44.5359
-          }, 
-          "end": {
-            "value": 48.7155
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 50.1551
-          }, 
-          "end": {
-            "value": 51.409
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 52.0591
-          }, 
-          "end": {
-            "value": 54.4276
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 55.0777
-          }, 
-          "end": {
-            "value": 57.4926
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 59.2109
-          }, 
-          "end": {
-            "value": 60.7434
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 62.183
-          }, 
-          "end": {
-            "value": 63.4834
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 89.6755
-          }, 
-          "end": {
-            "value": 97.1987
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 98.7312
-          }, 
-          "end": {
-            "value": 100.4495
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 101.7034
-          }, 
-          "end": {
-            "value": 103.6074
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 104.722
-          }, 
-          "end": {
-            "value": 106.4403
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 107.7406
-          }, 
-          "end": {
-            "value": 109.5982
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 110.7592
-          }, 
-          "end": {
-            "value": 112.5703
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 113.4063
-          }, 
-          "end": {
-            "value": 115.8676
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 116.7964
-          }, 
-          "end": {
-            "value": 118.4682
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 119.4899
-          }, 
-          "end": {
-            "value": 120.4651
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 130.6819
-          }, 
-          "end": {
-            "value": 138.8553
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 140.1092
-          }, 
-          "end": {
-            "value": 141.8275
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 142.3848
-          }, 
-          "end": {
-            "value": 165.744
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 168.3447
-          }, 
-          "end": {
-            "value": 193.0043
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 193.608
-          }, 
-          "end": {
-            "value": 194.3975
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 197.3232
-          }, 
-          "end": {
-            "value": 198.995
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 203.3604
-          }, 
-          "end": {
-            "value": 205.1251
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 209.2582
-          }, 
-          "end": {
-            "value": 211.1158
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 215.3419
-          }, 
-          "end": {
-            "value": 229.0416
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 233.3141
-          }, 
-          "end": {
-            "value": 235.3575
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 238.6547
-          }, 
-          "end": {
-            "value": 241.3482
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 245.4814
-          }, 
-          "end": {
-            "value": 247.1996
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 250.7291
-          }, 
-          "end": {
-            "value": 253.3297
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 257.5093
-          }, 
-          "end": {
-            "value": 259.2276
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 262.8034
-          }, 
-          "end": {
-            "value": 265.6363
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 265.8685
-          }, 
-          "end": {
-            "value": 325.6831
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 325.9617
-          }, 
-          "end": {
-            "value": 490.5448
-          }, 
-          "label": {
-            "value": "electric bass"
-          }
-        }, 
-        {
-          "start": {
-            "value": 24.0094
-          }, 
-          "end": {
-            "value": 45.2325
-          }, 
-          "label": {
-            "value": "accordion"
-          }
-        }, 
-        {
-          "start": {
-            "value": 46.5328
-          }, 
-          "end": {
-            "value": 69.3348
-          }, 
-          "label": {
-            "value": "accordion"
-          }
-        }, 
-        {
-          "start": {
-            "value": 87.2141
-          }, 
-          "end": {
-            "value": 170.8989
-          }, 
-          "label": {
-            "value": "accordion"
-          }
-        }, 
-        {
-          "start": {
-            "value": 180.6512
-          }, 
-          "end": {
-            "value": 488.2692
-          }, 
-          "label": {
-            "value": "accordion"
-          }
-        }, 
-        {
-          "start": {
-            "value": 26.1921
-          }, 
-          "end": {
-            "value": 28.7927
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 32.2293
-          }, 
-          "end": {
-            "value": 34.7835
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 38.22
-          }, 
-          "end": {
-            "value": 40.8207
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 44.2572
-          }, 
-          "end": {
-            "value": 46.8579
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 49.83
-          }, 
-          "end": {
-            "value": 53.3595
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 55.9137
-          }, 
-          "end": {
-            "value": 58.9322
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 61.9044
-          }, 
-          "end": {
-            "value": 65.3874
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 67.988
-          }, 
-          "end": {
-            "value": 101.1461
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 107.462
-          }, 
-          "end": {
-            "value": 120.6509
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 122.137
-          }, 
-          "end": {
-            "value": 125.3413
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 128.1741
-          }, 
-          "end": {
-            "value": 131.3785
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 134.2113
-          }, 
-          "end": {
-            "value": 137.3693
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 140.2021
-          }, 
-          "end": {
-            "value": 143.4064
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 144.8925
-          }, 
-          "end": {
-            "value": 170.2487
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 172.0134
-          }, 
-          "end": {
-            "value": 197.2767
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 199.1343
-          }, 
-          "end": {
-            "value": 203.2675
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 205.1715
-          }, 
-          "end": {
-            "value": 209.3047
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 211.1623
-          }, 
-          "end": {
-            "value": 218.9642
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 221.4255
-          }, 
-          "end": {
-            "value": 224.9549
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 227.4162
-          }, 
-          "end": {
-            "value": 230.9921
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 233.4534
-          }, 
-          "end": {
-            "value": 237.0293
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 239.4442
-          }, 
-          "end": {
-            "value": 243.02
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 312.7263
-          }, 
-          "end": {
-            "value": 315.2341
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 315.6056
-          }, 
-          "end": {
-            "value": 318.2527
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 318.6242
-          }, 
-          "end": {
-            "value": 321.2249
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 321.6428
-          }, 
-          "end": {
-            "value": 339.2435
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 382.3862
-          }, 
-          "end": {
-            "value": 472.4332
-          }, 
-          "label": {
-            "value": "mandolin"
-          }
-        }, 
-        {
-          "start": {
-            "value": 24.1952
-          }, 
-          "end": {
-            "value": 28.7463
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 30.6503
-          }, 
-          "end": {
-            "value": 35.2015
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 48.9477
-          }, 
-          "end": {
-            "value": 49.3192
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 49.9693
-          }, 
-          "end": {
-            "value": 54.2883
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 66.7341
-          }, 
-          "end": {
-            "value": 71.4246
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 72.632
-          }, 
-          "end": {
-            "value": 77.2296
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 81.6878
-          }, 
-          "end": {
-            "value": 86.3318
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 89.8612
-          }, 
-          "end": {
-            "value": 97.8024
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 99.9851
-          }, 
-          "end": {
-            "value": 109.2267
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 113.3134
-          }, 
-          "end": {
-            "value": 117.9574
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 118.4682
-          }, 
-          "end": {
-            "value": 124.2268
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 124.8305
-          }, 
-          "end": {
-            "value": 129.6602
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 130.7748
-          }, 
-          "end": {
-            "value": 141.6882
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 146.1464
-          }, 
-          "end": {
-            "value": 156.8276
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 157.7564
-          }, 
-          "end": {
-            "value": 168.5304
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 169.1341
-          }, 
-          "end": {
-            "value": 185.7132
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 186.5491
-          }, 
-          "end": {
-            "value": 191.6575
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 192.2148
-          }, 
-          "end": {
-            "value": 203.9176
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 204.2892
-          }, 
-          "end": {
-            "value": 246.2244
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 246.7352
-          }, 
-          "end": {
-            "value": 255.0944
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 257.5093
-          }, 
-          "end": {
-            "value": 270.3267
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 270.5125
-          }, 
-          "end": {
-            "value": 276.9676
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 278.4073
-          }, 
-          "end": {
-            "value": 295.0792
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 295.7758
-          }, 
-          "end": {
-            "value": 303.1597
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 303.9956
-          }, 
-          "end": {
-            "value": 309.104
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 313.8873
-          }, 
-          "end": {
-            "value": 318.2063
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 319.2744
-          }, 
-          "end": {
-            "value": 324.3363
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 324.9865
-          }, 
-          "end": {
-            "value": 330.42
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 331.1166
-          }, 
-          "end": {
-            "value": 335.9927
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 336.3643
-          }, 
-          "end": {
-            "value": 402.9127
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 403.2842
-          }, 
-          "end": {
-            "value": 448.1451
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 451.6281
-          }, 
-          "end": {
-            "value": 458.6405
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 460.6375
-          }, 
-          "end": {
-            "value": 469.4146
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 472.7583
-          }, 
-          "end": {
-            "value": 473.362
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 473.6871
-          }, 
-          "end": {
-            "value": 483.5788
-          }, 
-          "label": {
-            "value": "synthesizer"
-          }
-        }, 
-        {
-          "start": {
-            "value": 0.4644
-          }, 
-          "end": {
-            "value": 0.8824
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 2.4149
-          }, 
-          "end": {
-            "value": 3.901
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 4.7369
-          }, 
-          "end": {
-            "value": 10.7276
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 10.8205
-          }, 
-          "end": {
-            "value": 24.2881
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 24.4738
-          }, 
-          "end": {
-            "value": 25.8206
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 25.9599
-          }, 
-          "end": {
-            "value": 28.7463
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 28.9321
-          }, 
-          "end": {
-            "value": 31.3934
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 31.7185
-          }, 
-          "end": {
-            "value": 61.6258
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 62.0902
-          }, 
-          "end": {
-            "value": 69.3812
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 69.6599
-          }, 
-          "end": {
-            "value": 73.5144
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 74.1181
-          }, 
-          "end": {
-            "value": 118.8397
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 119.0719
-          }, 
-          "end": {
-            "value": 123.1586
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 123.3908
-          }, 
-          "end": {
-            "value": 126.1772
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 126.5488
-          }, 
-          "end": {
-            "value": 285.0017
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 285.4197
-          }, 
-          "end": {
-            "value": 287.4166
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 287.7881
-          }, 
-          "end": {
-            "value": 478.8419
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 1.3003
-          }, 
-          "end": {
-            "value": 3.2508
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 4.4118
-          }, 
-          "end": {
-            "value": 4.6904
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 5.6192
-          }, 
-          "end": {
-            "value": 241.7197
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 242.4628
-          }, 
-          "end": {
-            "value": 242.6021
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 243.6238
-          }, 
-          "end": {
-            "value": 317.6025
-          }, 
-          "label": {
-            "value": "tabla"
-          }
-        }, 
-        {
-          "start": {
-            "value": 318.0669
-          }, 
-          "end": {
-            "value": 487.8512
-          }, 
-          "label": {
-            "value": "tabla"
-          }
+          "duration": 21.5946, 
+          "confidence": null, 
+          "value": "drum machine", 
+          "time": 0.0
+        }, 
+        {
+          "duration": 120.97600000000001, 
+          "confidence": null, 
+          "value": "drum machine", 
+          "time": 23.8701
+        }, 
+        {
+          "duration": 193.32930000000002, 
+          "confidence": null, 
+          "value": "drum machine", 
+          "time": 168.2518
+        }, 
+        {
+          "duration": 72.7249, 
+          "confidence": null, 
+          "value": "drum machine", 
+          "time": 384.9868
+        }, 
+        {
+          "duration": 0.3715, 
+          "confidence": null, 
+          "value": "fx/processed sound", 
+          "time": 10.031
+        }, 
+        {
+          "duration": 463.331, 
+          "confidence": null, 
+          "value": "fx/processed sound", 
+          "time": 14.303500000000001
+        }, 
+        {
+          "duration": 2.1827, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 10.263200000000001
+        }, 
+        {
+          "duration": 1.3003, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 14.0249
+        }, 
+        {
+          "duration": 1.3468, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 17.043400000000002
+        }, 
+        {
+          "duration": 1.3004, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 20.062
+        }, 
+        {
+          "duration": 2.322, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 22.337600000000002
+        }, 
+        {
+          "duration": 1.3467, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 32.09
+        }, 
+        {
+          "duration": 1.5325000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 35.0621
+        }, 
+        {
+          "duration": 1.3932, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 38.0807
+        }, 
+        {
+          "duration": 1.3467, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 41.1458
+        }, 
+        {
+          "duration": 4.179600000000001, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 44.535900000000005
+        }, 
+        {
+          "duration": 1.2539, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 50.155100000000004
+        }, 
+        {
+          "duration": 2.3685, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 52.0591
+        }, 
+        {
+          "duration": 2.4149000000000003, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 55.0777
+        }, 
+        {
+          "duration": 1.5325000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 59.2109
+        }, 
+        {
+          "duration": 1.3004, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 62.18300000000001
+        }, 
+        {
+          "duration": 7.5232, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 89.6755
+        }, 
+        {
+          "duration": 1.7183000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 98.7312
+        }, 
+        {
+          "duration": 1.9040000000000001, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 101.7034
+        }, 
+        {
+          "duration": 1.7183000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 104.72200000000001
+        }, 
+        {
+          "duration": 1.8576000000000001, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 107.7406
+        }, 
+        {
+          "duration": 1.8111000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 110.7592
+        }, 
+        {
+          "duration": 2.4613, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 113.4063
+        }, 
+        {
+          "duration": 1.6718000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 116.7964
+        }, 
+        {
+          "duration": 0.9752000000000001, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 119.4899
+        }, 
+        {
+          "duration": 8.1734, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 130.6819
+        }, 
+        {
+          "duration": 1.7183000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 140.10920000000002
+        }, 
+        {
+          "duration": 23.3592, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 142.3848
+        }, 
+        {
+          "duration": 24.6596, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 168.34470000000002
+        }, 
+        {
+          "duration": 0.7895000000000001, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 193.608
+        }, 
+        {
+          "duration": 1.6718000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 197.3232
+        }, 
+        {
+          "duration": 1.7647000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 203.3604
+        }, 
+        {
+          "duration": 1.8576000000000001, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 209.25819999900003
+        }, 
+        {
+          "duration": 13.6997, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 215.3419
+        }, 
+        {
+          "duration": 2.0434, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 233.31410000000002
+        }, 
+        {
+          "duration": 2.6935000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 238.65470000000002
+        }, 
+        {
+          "duration": 1.7182000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 245.4814
+        }, 
+        {
+          "duration": 2.6006, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 250.72910000000002
+        }, 
+        {
+          "duration": 1.7183000000000002, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 257.5093
+        }, 
+        {
+          "duration": 2.8329, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 262.8034
+        }, 
+        {
+          "duration": 59.814600000000006, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 265.86850000000004
+        }, 
+        {
+          "duration": 164.5831, 
+          "confidence": null, 
+          "value": "electric bass", 
+          "time": 325.9617
+        }, 
+        {
+          "duration": 21.223100000000002, 
+          "confidence": null, 
+          "value": "accordion", 
+          "time": 24.009400000000003
+        }, 
+        {
+          "duration": 22.802000000000003, 
+          "confidence": null, 
+          "value": "accordion", 
+          "time": 46.5328
+        }, 
+        {
+          "duration": 83.68480000000001, 
+          "confidence": null, 
+          "value": "accordion", 
+          "time": 87.2141
+        }, 
+        {
+          "duration": 307.618, 
+          "confidence": null, 
+          "value": "accordion", 
+          "time": 180.65120000000002
+        }, 
+        {
+          "duration": 2.6006, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 26.1921
+        }, 
+        {
+          "duration": 2.5542000000000002, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 32.2293
+        }, 
+        {
+          "duration": 2.6007000000000002, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 38.22
+        }, 
+        {
+          "duration": 2.6007000000000002, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 44.257199999
+        }, 
+        {
+          "duration": 3.5295, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 49.830000000000005
+        }, 
+        {
+          "duration": 3.0185000000000004, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 55.913700000000006
+        }, 
+        {
+          "duration": 3.483, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 61.9044
+        }, 
+        {
+          "duration": 33.158100000000005, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 67.988
+        }, 
+        {
+          "duration": 13.1889, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 107.462
+        }, 
+        {
+          "duration": 3.2043000000000004, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 122.13700000000001
+        }, 
+        {
+          "duration": 3.2044, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 128.1741
+        }, 
+        {
+          "duration": 3.1580000000000004, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 134.2113
+        }, 
+        {
+          "duration": 3.2043000000000004, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 140.2021
+        }, 
+        {
+          "duration": 25.3562, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 144.8925
+        }, 
+        {
+          "duration": 25.263299999, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 172.01340000000002
+        }, 
+        {
+          "duration": 4.1332, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 199.13430000000002
+        }, 
+        {
+          "duration": 4.1332, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 205.1715
+        }, 
+        {
+          "duration": 7.801900000000001, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 211.16230000000002
+        }, 
+        {
+          "duration": 3.5294000000000003, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 221.42550000000003
+        }, 
+        {
+          "duration": 3.5759000000000003, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 227.4162
+        }, 
+        {
+          "duration": 3.5759000000000003, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 233.45340000000002
+        }, 
+        {
+          "duration": 3.5758, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 239.44420000000002
+        }, 
+        {
+          "duration": 2.5078, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 312.72630000000004
+        }, 
+        {
+          "duration": 2.6471, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 315.60560000000004
+        }, 
+        {
+          "duration": 2.6007000000000002, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 318.62420000000003
+        }, 
+        {
+          "duration": 17.6007, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 321.6428
+        }, 
+        {
+          "duration": 90.04700000000001, 
+          "confidence": null, 
+          "value": "mandolin", 
+          "time": 382.38620000000003
+        }, 
+        {
+          "duration": 4.5511, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 24.1952
+        }, 
+        {
+          "duration": 4.551200000000001, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 30.6503
+        }, 
+        {
+          "duration": 0.3715, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 48.947700000000005
+        }, 
+        {
+          "duration": 4.319, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 49.969300000000004
+        }, 
+        {
+          "duration": 4.6905, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 66.7341
+        }, 
+        {
+          "duration": 4.5976, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 72.632
+        }, 
+        {
+          "duration": 4.644, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 81.68780000000001
+        }, 
+        {
+          "duration": 7.9412, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 89.86120000000001
+        }, 
+        {
+          "duration": 9.2416, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 99.9851
+        }, 
+        {
+          "duration": 4.644, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 113.3134
+        }, 
+        {
+          "duration": 5.7586, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 118.46820000000001
+        }, 
+        {
+          "duration": 4.8297, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 124.8305
+        }, 
+        {
+          "duration": 10.913400000000001, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 130.7748
+        }, 
+        {
+          "duration": 10.6812, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 146.1464
+        }, 
+        {
+          "duration": 10.774000000000001, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 157.7564
+        }, 
+        {
+          "duration": 16.5791, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 169.13410000000002
+        }, 
+        {
+          "duration": 5.1084000000000005, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 186.5491
+        }, 
+        {
+          "duration": 11.7028, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 192.21480000000003
+        }, 
+        {
+          "duration": 41.9352, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 204.28920000000002
+        }, 
+        {
+          "duration": 8.359200000000001, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 246.73520000000002
+        }, 
+        {
+          "duration": 12.817400000000001, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 257.5093
+        }, 
+        {
+          "duration": 6.455100000000001, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 270.512499999
+        }, 
+        {
+          "duration": 16.6719, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 278.4073
+        }, 
+        {
+          "duration": 7.383900000000001, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 295.7758
+        }, 
+        {
+          "duration": 5.1084000000000005, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 303.9956
+        }, 
+        {
+          "duration": 4.319, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 313.88730000000004
+        }, 
+        {
+          "duration": 5.0619000000000005, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 319.2744
+        }, 
+        {
+          "duration": 5.4335, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 324.98650000000004
+        }, 
+        {
+          "duration": 4.8761, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 331.1166
+        }, 
+        {
+          "duration": 66.5484, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 336.3643
+        }, 
+        {
+          "duration": 44.8609, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 403.2842
+        }, 
+        {
+          "duration": 7.0124, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 451.6281
+        }, 
+        {
+          "duration": 8.7771, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 460.63750000000005
+        }, 
+        {
+          "duration": 0.6037, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 472.7583
+        }, 
+        {
+          "duration": 9.8917, 
+          "confidence": null, 
+          "value": "synthesizer", 
+          "time": 473.68710000000004
+        }, 
+        {
+          "duration": 0.41800000000000004, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 0.46440000000000003
+        }, 
+        {
+          "duration": 1.4861000000000002, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 2.4149000000000003
+        }, 
+        {
+          "duration": 5.9907, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 4.7369
+        }, 
+        {
+          "duration": 13.467600000000001, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 10.820500000000001
+        }, 
+        {
+          "duration": 1.3468, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 24.4738
+        }, 
+        {
+          "duration": 2.7864, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 25.9599
+        }, 
+        {
+          "duration": 2.4613, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 28.932100000000002
+        }, 
+        {
+          "duration": 29.907300000000003, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 31.718500000000002
+        }, 
+        {
+          "duration": 7.291, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 62.0902
+        }, 
+        {
+          "duration": 3.8545000000000003, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 69.65990000000001
+        }, 
+        {
+          "duration": 44.7216, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 74.1181
+        }, 
+        {
+          "duration": 4.0867, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 119.07190000000001
+        }, 
+        {
+          "duration": 2.7864, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 123.39080000000001
+        }, 
+        {
+          "duration": 158.4529, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 126.54880000000001
+        }, 
+        {
+          "duration": 1.9969000000000001, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 285.41970000000003
+        }, 
+        {
+          "duration": 191.05380000000002, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 287.78810000000004
+        }, 
+        {
+          "duration": 1.9505000000000001, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 1.3003
+        }, 
+        {
+          "duration": 0.2786, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 4.4118
+        }, 
+        {
+          "duration": 236.1005, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 5.6192
+        }, 
+        {
+          "duration": 0.1393, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 242.46280000000002
+        }, 
+        {
+          "duration": 73.9787, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 243.62380000000002
+        }, 
+        {
+          "duration": 169.7843, 
+          "confidence": null, 
+          "value": "tabla", 
+          "time": 318.06690000000003
         }
       ]
     }
   ], 
   "file_metadata": {
+    "jams_version": "0.2.1", 
     "title": "Phase Transition", 
-    "jams_version": "0.0.1", 
+    "identifiers": {}, 
+    "release": "", 
+    "duration": 490.54480000000001, 
     "artist": "Tabla Breakbeat Science"
   }
 }
