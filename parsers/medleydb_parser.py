@@ -19,16 +19,19 @@ __version__ = "1.0"
 __email__ = "rachel.bittner@nyu.edu"
 
 import argparse
-import json
 import logging
 import os
-import sys
 import time
 import yaml
+import pandas as pd
 
-sys.path.append("..")
-import pyjams
-import pyjams.util as U
+from tqdm import tqdm
+
+import jams
+
+from medleydb import __version__ as VERSION
+
+CORPUS = "MedleyDB"
 
 
 MEL1 = "The f0 curve of predominant melodic line drawn from a single source"
@@ -37,118 +40,133 @@ MEL3 = "The f0 curves of all melodic lines drawn from multiple sources"
 MELODY_DEFS = {1: MEL1, 2: MEL2, 3: MEL3}
 
 
-def fill_file_metadata(jam, artist, title):
+def fill_file_metadata(jam, artist, title, duration):
     """Fills the song-level metadata into the JAMS jam."""
-    
+
     jam.file_metadata.artist = artist
     jam.file_metadata.title = title
-
+    jam.file_metadata.duration = duration
 
 def fill_genre_annotation_metadata(annot):
     """Fills the annotation metadata."""
-    annot.annotation_metadata.corpus = "MedleyDB"
-    annot.annotation_metadata.version = "1.0"
+    annot.annotation_metadata.corpus = CORPUS
+    annot.annotation_metadata.version = VERSION
     annot.annotation_metadata.annotation_tools = ""
     annot.annotation_metadata.annotation_rules = ""
     annot.annotation_metadata.validation = "None"
     annot.annotation_metadata.data_source = "Manual Annotation"
-    annot.annotation_metadata.curator = pyjams.Curator(name="Rachel Bittner",
-                                                       email='rachel.bittner@nyu.edu')
+    annot.annotation_metadata.curator = jams.Curator(name="Rachel Bittner",
+                                                     email='rachel.bittner@nyu.edu')
     annot.annotation_metadata.annotator = {}
 
 
 def fill_melody_annotation_metadata(annot, mel_type):
     """Fills the annotation metadata."""
-    annot.annotation_metadata.corpus = "MedleyDB"
-    annot.annotation_metadata.version = "1.0"
+    annot.annotation_metadata.corpus = CORPUS
+    annot.annotation_metadata.version = VERSION
     annot.annotation_metadata.annotation_tools = "Tony"
     annot.annotation_metadata.annotation_rules = MELODY_DEFS[mel_type]
     annot.annotation_metadata.validation = "Manual Validation"
     annot.annotation_metadata.data_source = "Manual Annotation"
-    annot.annotation_metadata.curator = pyjams.Curator(name="Rachel Bittner",
-                                                       email='rachel.bittner@nyu.edu')
+    annot.annotation_metadata.curator = jams.Curator(name="Rachel Bittner",
+                                                     email='rachel.bittner@nyu.edu')
     annot.annotation_metadata.annotator = {}
 
 
 def fill_instid_annotation_metadata(annot):
     """Fills the annotation metadata."""
-    annot.annotation_metadata.corpus = "MedleyDB"
-    annot.annotation_metadata.version = "1.0"
+    annot.annotation_metadata.corpus = CORPUS
+    annot.annotation_metadata.version = VERSION
     annot.annotation_metadata.annotation_tools = ""
     annot.annotation_metadata.annotation_rules = ""
     annot.annotation_metadata.validation = "None"
     annot.annotation_metadata.data_source = "Automatic Annotation"
-    annot.annotation_metadata.curator = pyjams.Curator(name="Juan P. Bello",
-                                                       email='jpbello@nyu.edu')
+    annot.annotation_metadata.curator = jams.Curator(name="Juan P. Bello",
+                                                     email='jpbello@nyu.edu')
     annot.annotation_metadata.annotator = {}
 
 
-def fill_melody_annotation(annot_fpath, melody_annot, mel_type):
+def fill_genre_annotation(genre):
+
+    ann = jams.Annotation(namespace='tag_open')
+    ann.append(time=0.0, duration=0.0, value=genre)
+    fill_genre_annotation_metadata(ann)
+    return ann
+
+def fill_melody_annotation(annot_fpath, mel_type):
     """Fill a melody annotation with data from annot_fpath."""
-    times, values = U.read_lab(annot_fpath, 2, delimiter=",")
-    U.fill_timeseries_annotation_data(times, values, None, melody_annot)
-    fill_melody_annotation_metadata(melody_annot, mel_type)
 
+    ann = jams.Annotation(namespace='pitch_hz')
+    df = pd.read_csv(annot_fpath, header=None, names=['time', 'value'])
+    df['duration'] = 0.0
+    df['confidence'] = None
 
-def fill_instid_annotation(annot_fpath, instid_annot):
+    ann.time = 0.0
+    ann.duration = df['time'].max()
+
+    ann.data = jams.JamsFrame.from_dataframe(df)
+
+    fill_melody_annotation_metadata(ann, mel_type)
+
+    return ann
+
+def fill_instid_annotation(annot_fpath):
     """Fill an instrument id annotation with data from annot_fpath."""
-    start_times, end_times, inst_labels = U.read_lab(annot_fpath, 3, 
-                                                     delimiter=",", header=True)
-    U.fill_range_annotation_data(start_times, end_times, inst_labels, 
-                                 instid_annot)
-    fill_instid_annotation_metadata(instid_annot)
 
+    ann = jams.Annotation(namespace='tag_medleydb_instruments')
+    df = pd.read_csv(annot_fpath)
+
+    for _, record in df.iterrows():
+        ann.append(time=record['start_time'],
+                   duration=record['end_time'] - record['start_time'],
+                   value=record['instrument_label'])
+    ann.time = 0.0
+    ann.duration = df['end_time'].max()
+
+    fill_instid_annotation_metadata(ann)
+
+    return ann
 
 def create_JAMS(dataset_dir, trackid, out_file):
     """Creates a JAMS file given the Isophonics lab file."""
 
-    metadata_file = os.path.join(dataset_dir, 'Audio', trackid, 
-                                 '%s_METADATA.yaml' % trackid)
+    metadata_file = os.path.join(dataset_dir, 'Audio', trackid, '{:s}_METADATA.yaml'.format(trackid))
 
     with open(metadata_file, 'r') as f_in:
         metadata = yaml.load(f_in)
 
-
     # New JAMS and annotation
-    jam = pyjams.JAMS()
+    jam = jams.JAMS()
 
-    # Global file metadata
-    fill_file_metadata(jam, metadata['artist'], metadata['title'])
 
     # Create Genre Annotation
-    genre_annot = jam.genre.create_annotation()
-    U.fill_observation_annotation_data([metadata['genre']], [1], [""], 
-                                       genre_annot)
-    fill_genre_annotation_metadata(genre_annot)
+    jam.annotations.append(fill_genre_annotation(metadata['genre']))
 
     # Create Melody Annotations
-    melody_path = os.path.join(dataset_dir, 'Annotations', 'Melody_Annotations')
-    
-    melody1_fpath = os.path.join(melody_path, 'MELODY1', 
-                                 "%s_MELODY1.csv" % trackid)
-    if os.path.exists(melody1_fpath):
-        melody1_annot = jam.melody.create_annotation()
-        fill_melody_annotation(melody1_fpath, melody1_annot, 1)
+    track_path = os.path.join(dataset_dir, 'Annotations', '{:s}_ANNOTATIONS'.format(trackid))
 
-    melody2_fpath = os.path.join(melody_path, 'MELODY2', 
-                                 "%s_MELODY2.csv" % trackid)
+    melody1_fpath = os.path.join(track_path, "{:s}_MELODY1.csv".format(trackid))
+    if os.path.exists(melody1_fpath):
+        jam.annotations.append(fill_melody_annotation(melody1_fpath, 1))
+
+    melody2_fpath = os.path.join(track_path, "{:s}_MELODY2.csv".format(trackid))
     if os.path.exists(melody2_fpath):
-        melody2_annot = jam.melody.create_annotation()
-        fill_melody_annotation(melody2_fpath, melody2_annot, 2)
+        jam.annotations.append(fill_melody_annotation(melody2_fpath, 2))
 
     # Create SourceID Annotation
-    instid_fpath = os.path.join(dataset_dir, 'Annotations', 
-                                'Instrument_Activations', 'SOURCEID',
-                                "%s_SOURCEID.lab" % trackid)
-    if os.path.exists(instid_fpath):
-        instid_annot = jam.source.create_annotation()
-        fill_instid_annotation(instid_fpath, instid_annot)
+    instid_fpath = os.path.join(track_path, "{:s}_SOURCEID.lab".format(trackid))
 
-    # jam.file_metadata.duration = end_times[-1]
+    if os.path.exists(instid_fpath):
+        jam.annotations.append(fill_instid_annotation(instid_fpath))
+
+    # Get the track duration
+    duration = jam.annotations[-1].duration
+
+    # Global file metadata
+    fill_file_metadata(jam, metadata['artist'], metadata['title'], duration)
 
     # Save JAMS
-    with open(out_file, "w") as fp:
-        json.dump(jam, fp, indent=2)
+    jam.save(out_file)
 
 
 def process(in_dir, out_dir):
@@ -156,13 +174,13 @@ def process(in_dir, out_dir):
     them in the out_dir folder."""
 
     # Collect all trackid's.
-    yaml_files = U.find_with_extension(os.path.join(in_dir, 'Audio'), 'yaml')
-    trackids = [U.filebase(y).replace("_METADATA", "") for y in yaml_files]
+    yaml_files = jams.util.find_with_extension(os.path.join(in_dir, 'Metadata'), 'yaml')
+    trackids = [jams.util.filebase(y).replace("_METADATA", "") for y in yaml_files]
 
-    U.smkdirs(out_dir)
+    jams.util.smkdirs(out_dir)
 
-    for trackid in trackids:
-        jams_file = os.path.join(out_dir, "%s.jams" % trackid)
+    for trackid in tqdm(trackids):
+        jams_file = os.path.join(out_dir, "{:s}.jams".format(trackid))
         #Create a JAMS file for this track
         create_JAMS(in_dir, trackid, jams_file)
 
