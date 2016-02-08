@@ -7,7 +7,7 @@ Usage example:
 """
 
 __author__ = "Oriol Nieto"
-__copyright__ = "Copyright 2015, Music and Audio Research Lab (MARL)"
+__copyright__ = "Copyright 2016, Music and Audio Research Lab (MARL)"
 __license__ = "MIT"
 __version__ = "1.1"
 __email__ = "oriol@nyu.edu"
@@ -20,6 +20,7 @@ import os
 import time
 
 import jams
+
 
 # Mapping of the labels to the actual labels allowed by the SALAMI guidelines
 labels_map = {
@@ -242,7 +243,8 @@ def process(in_dir, out_dir):
     # Open CSV with metadata
     with open(os.path.join(in_dir, "metadata", "metadata.csv")) as fh:
         csv_reader = csv.reader(fh)
-        for i, metadata in list(enumerate(csv_reader)):
+
+        for metadata in list(csv_reader):
             if metadata[0] == "SONG_ID":
                 continue
             # Create a JAMS file for this track
