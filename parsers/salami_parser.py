@@ -14,6 +14,7 @@ __email__ = "oriol@nyu.edu"
 
 import argparse
 import csv
+from joblib import Parallel, delayed
 import logging
 import numpy as np
 import os
@@ -232,7 +233,19 @@ def create_JAMS(in_dir, metadata, out_file):
     jam.save(out_file)
 
 
-def process(in_dir, out_dir):
+def process_one(metadata, in_dir, out_dir):
+    """Processes one track given its metadata."""
+    if metadata[0] == "SONG_ID":
+        return
+
+    # Create a JAMS file for this track
+    logging.info("Parsing file %s..." % metadata[0])
+    create_JAMS(in_dir, metadata,
+                os.path.join(out_dir,
+                    os.path.basename(metadata[0]) + ".jams"))
+
+
+def process(in_dir, out_dir, n_jobs):
     """Converts the original SALAMI files into the JAMS format, and saves
     them in the out_dir folder."""
 
@@ -240,18 +253,11 @@ def process(in_dir, out_dir):
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
 
-    # Open CSV with metadata
+    # Open CSV with metadata and parse
     with open(os.path.join(in_dir, "metadata", "metadata.csv")) as fh:
         csv_reader = csv.reader(fh)
-
-        for metadata in list(csv_reader):
-            if metadata[0] == "SONG_ID":
-                continue
-            # Create a JAMS file for this track
-            logging.info("Parsing file %s..." % metadata[0])
-            create_JAMS(in_dir, metadata,
-                        os.path.join(out_dir,
-                            os.path.basename(metadata[0]) + ".jams"))
+        Parallel(n_jobs=n_jobs)(delayed(process_one)(
+            metadata, in_dir, out_dir) for metadata in list(csv_reader))
 
 
 if __name__ == '__main__':
@@ -264,6 +270,12 @@ if __name__ == '__main__':
     parser.add_argument("out_dir",
                         action="store",
                         help="Output JAMS folder")
+    parser.add_argument("-j",
+                        dest="n_jobs",
+                        action="store",
+                        type=int,
+                        default=2,
+                        help="Number of CPUs to run in parallel.")
     args = parser.parse_args()
     start_time = time.time()
 
@@ -271,7 +283,7 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s: %(message)s', level=logging.INFO)
 
     # Run the parser
-    process(args.in_dir, args.out_dir)
+    process(args.in_dir, args.out_dir, args.n_jobs)
 
     # Done!
     logging.info("Done! Took %.2f seconds." % (time.time() - start_time))
