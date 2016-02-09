@@ -6,12 +6,6 @@ Usage example:
     ./salami_parser.py salami-data-public/ OutputSalamiJAMS
 """
 
-__author__ = "Oriol Nieto"
-__copyright__ = "Copyright 2016, Music and Audio Research Lab (MARL)"
-__license__ = "MIT"
-__version__ = "1.1"
-__email__ = "oriol@nyu.edu"
-
 import argparse
 import csv
 from joblib import Parallel, delayed
@@ -21,6 +15,12 @@ import os
 import time
 
 import jams
+
+__author__ = "Oriol Nieto"
+__copyright__ = "Copyright 2016, Music and Audio Research Lab (MARL)"
+__license__ = "MIT"
+__version__ = "1.2"
+__email__ = "oriol@nyu.edu"
 
 
 # Mapping of the labels to the actual labels allowed by the SALAMI guidelines
@@ -242,7 +242,7 @@ def process_one(metadata, in_dir, out_dir):
     logging.info("Parsing file %s..." % metadata[0])
     create_JAMS(in_dir, metadata,
                 os.path.join(out_dir,
-                    os.path.basename(metadata[0]) + ".jams"))
+                             os.path.basename(metadata[0]) + ".jams"))
 
 
 def process(in_dir, out_dir, n_jobs):
@@ -261,8 +261,8 @@ def process(in_dir, out_dir, n_jobs):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description=
-        "Converts the SALAMI dataset to the JAMS format",
+    parser = argparse.ArgumentParser(
+        description="Converts the SALAMI dataset to the JAMS format",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("in_dir",
                         action="store",
