@@ -14,7 +14,7 @@ Example:
 """
 
 __author__ = "J. Salamon"
-__copyright__ = "Copyright 2014, Music and Audio Research Lab (MARL)"
+__copyright__ = "Copyright 2016, Music and Audio Research Lab (MARL)"
 __license__ = "GPL"
 __version__ = "1.0"
 __email__ = "justin.salamon@nyu.edu"
@@ -23,8 +23,15 @@ import argparse
 import logging
 import os
 import time
+import audioread
 
 import jams
+
+
+def get_track_duration(filename):
+    '''Get the track duration for a filename'''
+    with audioread.audio_open(filename) as fdesc:
+        return fdesc.duration
 
 
 def fill_file_metadata(jam, lab_file, duration):
@@ -48,9 +55,10 @@ def fill_annotation_metadata(annot):
     annot.annotation_metadata.annotator = {}
 
 
-def create_JAMS(lab_file, out_file):
+def create_JAMS(lab_file, audio_file, out_file):
     """
-    Creates a JAMS file given the adc2004 annotation file (*.REF.txt).
+    Creates a JAMS file given the adc2004 annotation file (*REF.txt) and
+    corresponding audio file (*.wav).
     Note: the melody f0 annotations are provided in the *REF.txt files,
     not the .lab files (which contain quantized note annotations).
     """
@@ -65,7 +73,7 @@ def create_JAMS(lab_file, out_file):
     fill_annotation_metadata(melody_ann)
 
     # Fill file metadata
-    duration = melody_ann.data['time'].max().total_seconds()
+    duration = get_track_duration(audio_file)
     fill_file_metadata(jam, lab_file, duration)
 
     # Save JAMS
@@ -81,11 +89,12 @@ def process_folder(in_dir, out_dir):
     f0_files += jams.util.find_with_extension(in_dir, '.txt', depth=1)
 
     for f0_file in f0_files:
+        audio_file = f0_file.replace("REF.txt", ".wav")
         jams_file = os.path.join(out_dir,
                             os.path.basename(f0_file).replace('.txt', '.jams'))
         jams.util.smkdirs(os.path.split(jams_file)[0])
         # Create a JAMS file for this track
-        create_JAMS(f0_file, jams_file)
+        create_JAMS(f0_file, audio_file, jams_file)
 
 
 def main():
