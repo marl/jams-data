@@ -62,11 +62,8 @@ def create_JAMS(lab_file, audio_file, out_file):
     the corresponding audio file (*.wav).
     """
 
-    # New JAMS and annotation
-    jam = jams.JAMS()
-
     # Import melody annotation
-    jam, melody_ann = jams.util.import_lab('pitch_hz', lab_file, jam=jam)
+    jam, melody_ann = jams.util.import_lab('pitch_hz', lab_file)
 
     # Fill annotation metadata
     fill_annotation_metadata(melody_ann)
