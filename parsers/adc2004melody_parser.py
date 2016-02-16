@@ -43,8 +43,8 @@ def fill_annotation_metadata(annot):
     annot.annotation_metadata.validation = "TODO"
     annot.annotation_metadata.data_source = ""
     annot.annotation_metadata.curator = jams.Curator(name="Emilia Gomez",
-                                                       email="emilia.gomez"
-                                                             "@upf.edu")
+                                                     email="emilia.gomez"
+                                                           "@upf.edu")
     annot.annotation_metadata.annotator = {}
 
 
