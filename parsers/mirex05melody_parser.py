@@ -84,8 +84,7 @@ def process_folder(in_dir, out_dir):
     them in the out_dir folder."""
 
     # Collect all melody f0 annotations.
-    f0_files = list()
-    f0_files += jams.util.find_with_extension(in_dir, '.txt', depth=1)
+    f0_files = jams.util.find_with_extension(in_dir, '.txt', depth=1)
 
     for f0_file in f0_files:
         audio_file = f0_file.replace("REF.txt", ".wav")
