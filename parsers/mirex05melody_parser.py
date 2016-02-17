@@ -15,26 +15,31 @@ Example:
 """
 
 __author__ = "J. Salamon"
-__copyright__ = "Copyright 2014, Music and Audio Research Lab (MARL)"
+__copyright__ = "Copyright 2016, Music and Audio Research Lab (MARL)"
 __license__ = "GPL"
 __version__ = "1.0"
 __email__ = "justin.salamon@nyu.edu"
 
 import argparse
-import json
 import logging
 import os
-import sys
 import time
+import audioread
 
-sys.path.append("..")
-import pyjams
+import jams
 
 
-def fill_file_metadata(jam, lab_file):
+def get_track_duration(filename):
+    '''Get the track duration for a filename'''
+    with audioread.audio_open(filename) as fdesc:
+        return fdesc.duration
+
+
+def fill_file_metadata(jam, lab_file, duration):
     """Fills the global metada into the JAMS jam."""
     jam.file_metadata.artist = ""
     jam.file_metadata.title = os.path.basename(lab_file).replace("REF.txt", "")
+    jam.file_metadata.duration = duration
 
 
 def fill_annotation_metadata(annot):
@@ -43,35 +48,32 @@ def fill_annotation_metadata(annot):
     annot.annotation_metadata.version = "1.0"
     annot.annotation_metadata.annotation_tools = ""
     annot.annotation_metadata.annotation_rules = ""
-    annot.annotation_metadata.validation = "TODO"
+    annot.annotation_metadata.validation = ""
     annot.annotation_metadata.data_source = ""
-    annot.annotation_metadata.curator = pyjams.Curator(name="Daniel P.W. Ellis",
-                                                       email="dpwe"
-                                                             "@ee.columbia.edu")
+    annot.annotation_metadata.curator = jams.Curator(name="Daniel P.W. Ellis",
+                                                     email="dpwe"
+                                                           "@ee.columbia.edu")
     annot.annotation_metadata.annotator = {}
 
 
-def create_JAMS(lab_file, out_file):
+def create_JAMS(lab_file, audio_file, out_file):
     """
-    Creates a JAMS file given the mirex05 annotation file (*.REF.txt).
+    Creates a JAMS file given the MIREX05 annotation file (*REF.txt) and
+    the corresponding audio file (*.wav).
     """
 
-    # New JAMS and annotation
-    jam = pyjams.JAMS()
+    # Import melody annotation
+    jam, melody_ann = jams.util.import_lab('pitch_hz', lab_file)
 
-    # Global file metadata
-    fill_file_metadata(jam, lab_file)
+    # Fill annotation metadata
+    fill_annotation_metadata(melody_ann)
 
-    # Create Melody annotation
-    times, values = pyjams.util.read_lab(lab_file, 2)
-    melody_annot = jam.melody.create_annotation()
-    pyjams.util.fill_timeseries_annotation_data(times, values, None,
-                                                melody_annot)
-    fill_annotation_metadata(melody_annot)
+    # Fill file metadata
+    duration = get_track_duration(audio_file)
+    fill_file_metadata(jam, lab_file, duration)
 
     # Save JAMS
-    with open(out_file, "w") as fp:
-        json.dump(jam, fp, indent=2)
+    jam.save(out_file)
 
 
 def process_folder(in_dir, out_dir):
@@ -79,15 +81,15 @@ def process_folder(in_dir, out_dir):
     them in the out_dir folder."""
 
     # Collect all melody f0 annotations.
-    f0_files = list()
-    f0_files += pyjams.util.find_with_extension(in_dir, '.txt', depth=1)
+    f0_files = jams.util.find_with_extension(in_dir, '.txt', depth=1)
 
     for f0_file in f0_files:
+        audio_file = f0_file.replace("REF.txt", ".wav")
         jams_file = os.path.join(out_dir,
                             os.path.basename(f0_file).replace('.txt', '.jams'))
-        pyjams.util.smkdirs(os.path.split(jams_file)[0])
+        jams.util.smkdirs(os.path.split(jams_file)[0])
         # Create a JAMS file for this track
-        create_JAMS(f0_file, jams_file)
+        create_JAMS(f0_file, audio_file, jams_file)
 
 
 def main():
