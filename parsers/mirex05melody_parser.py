@@ -48,7 +48,7 @@ def fill_annotation_metadata(annot):
     annot.annotation_metadata.version = "1.0"
     annot.annotation_metadata.annotation_tools = ""
     annot.annotation_metadata.annotation_rules = ""
-    annot.annotation_metadata.validation = "TODO"
+    annot.annotation_metadata.validation = ""
     annot.annotation_metadata.data_source = ""
     annot.annotation_metadata.curator = jams.Curator(name="Daniel P.W. Ellis",
                                                      email="dpwe"
