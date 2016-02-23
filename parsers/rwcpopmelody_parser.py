@@ -28,6 +28,10 @@ import logging
 import os
 import time
 import audioread
+import midi
+import pretty_midi
+import glob
+import pandas as pd
 
 import jams
 
@@ -38,41 +42,138 @@ def get_track_duration(filename):
         return fdesc.duration
 
 
-def fill_file_metadata(jam, lab_file, duration):
+def fill_file_metadata(jam, metadata, n_track):
     """Fills the global metada into the JAMS jam."""
-    jam.file_metadata.artist = "TODO"
-    jam.file_metadata.title = "TODO"
-    jam.file_metadata.duration = duration
+    jam.file_metadata.artist = metadata['Artist (Vocal)'][n_track]
+    jam.file_metadata.title = metadata['Title'][n_track]
+
+    d_str = metadata['Length'][n_track]
+    jam.file_metadata.duration = (float(d_str.split(":")[0]) * 60 +
+                                  float(d_str.split(":")[1]))
 
 
 def fill_annotation_metadata(annot):
     """Fills the annotation metadata."""
-    annot.annotation_metadata.corpus = "TODO"
-    annot.annotation_metadata.version = "TODO"
-    annot.annotation_metadata.annotation_tools = "TODO"
-    annot.annotation_metadata.annotation_rules = "TODO"
-    annot.annotation_metadata.validation = "TODO"
-    annot.annotation_metadata.data_source = "TODO"
-    annot.annotation_metadata.curator = jams.Curator(name="TODO",
-                                                     email="TODO")
+    annot.annotation_metadata.corpus = "RWC Music Database: Popular Music"
+    annot.annotation_metadata.version = "1.0"
+    annot.annotation_metadata.annotation_tools = ""
+    annot.annotation_metadata.annotation_rules = ""
+    annot.annotation_metadata.validation = ""
+    annot.annotation_metadata.data_source = ""
+    annot.annotation_metadata.curator = jams.Curator(name="Masataka Goto",
+                                                     email="m.goto@aist.go.jp")
     annot.annotation_metadata.annotator = {}
 
 
-def create_jams(lab_file, audio_file, out_file):
+def create_jams(audio_file, smf_file, out_file, metadata):
     """
     Creates a JAMS file given the RWC POP audio file (RM-P*.wav) and
     corresponding smf file (RM-P*.MID).
     Note: only the notes of the MELODY track are kept!
     """
 
-    # TODO
+    # Load midi file
+    m = midi.read_midifile(smf_file)
+
+    # This will store the relevant MIDI tracks
+    melody = []
+
+    # Track 0 is metadata that we need
+    melody.append(m[0])
+
+    # Collect track text (convert to lower case and remove spaces)
+    # track_text = []
+    # for t in m:
+    #     for e in t:
+    #         if isinstance(e, midi.TrackNameEvent):
+    #             track_text.append("".join(e.text.lower().split()))
+
+    # Collect track text (convert to lower case and remove spaces)
+    track_text = ["".join(e.text.lower().split()) for t in m
+                  for e in t if isinstance(e, midi.TrackNameEvent)]
+
+    assert len(track_text) == len(m)
+
+    # Find the melody track: it should START with "melo", or if that's not
+    # there then "voca" (for vocal).
+    track_text = [t[:4] for t in track_text]
+    if 'melo' in track_text:
+        index = track_text.index('melo')
+    elif 'voca' in track_text:
+        index = track_text.index('voca')
+    else:
+        print("ABORTING TRACK: couldn't find melody for: %s" % smf_file)
+        return 0
+
+    melody.append(m[index])
+
+    # Create new midi pattern with just these tracks
+    m = midi.Pattern(tracks=melody, resolution=m.resolution,
+                     format=m.format, tick_relative=m.tick_relative)
+
+    # Write temporary midi file
+    temp_midi = out_file.replace(".jams", ".temp.mid")
+    midi.write_midifile(temp_midi, m)
+
+    # Load temp midi file using pretty_midi
+    pm = pretty_midi.PrettyMIDI(temp_midi)
+
+    assert len(pm.instruments) == 2
+    assert pm.instruments[0].notes == []
+    assert len(pm.instruments[1].notes) > 0
+
+    # Get the melody notes
+    notes = pm.instruments[1].notes
+
+    # Create jam
+    jam = jams.JAMS()
+
+    # Create annotation
+    midi_ann = jams.Annotation('pitch_midi')
+
+    # Add notes to the annotation
+    for note in notes:
+        midi_ann.append(time=note.start, duration=(note.end-note.start),
+                        value=note.pitch, confidence=1.)
+
+    # Fill annotation metadata
+    fill_annotation_metadata(midi_ann)
+
+    # Add annotation to jam
+    jam.annotations.append(midi_ann)
+
+    # Fill file metadata
+    n_track = int(os.path.basename(smf_file)[4:7]) - 1
+    fill_file_metadata(jam, metadata, n_track)
+
+    # Save JAMS
+    jam.save(out_file)
+
+    # Remove temporary midi file
+    os.remove(temp_midi)
 
 
 def process_folder(audio_dir, smf_dir, out_dir):
-    """Converts the original f0 annotations into the JAMS format, and saves
-    them in the out_dir folder."""
+    """Converts the original SMF annotations into the JAMS format (keeping only
+    the notes of the melody track), and saves them in the out_dir folder."""
 
-    # TODO
+    # Collect all SMF annotations.
+    smf_files = jams.util.find_with_extension(smf_dir, '.MID', depth=1)
+
+    # Get metadata
+    metadata = pd.read_csv('data/rwcmelodypop/metadata.csv')
+
+    for smf in smf_files:
+        audio_file = (
+            glob.glob(os.path.join(audio_dir, os.path.basename(smf)[:7] +
+                                   "*.wav")))
+        jams_file = (
+            os.path.join(out_dir,
+                         os.path.basename(smf).replace('.MID', '.jams')))
+        jams.util.smkdirs(os.path.split(jams_file)[0])
+        # Create a JAMS file for this track
+        print(smf)
+        create_jams(audio_file, smf, jams_file, metadata)
 
 
 def main():
