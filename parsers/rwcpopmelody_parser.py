@@ -69,8 +69,7 @@ def fill_annotation_metadata(annot):
 
 def create_jams(smf_file, out_file, metadata):
     """
-    Creates a JAMS file given the RWC POP audio file (RM-P*.wav) and
-    corresponding smf file (RM-P*.MID).
+    Creates a JAMS file from an RWC POP smf file (RM-P*.MID).
     Note: only the notes of the MELODY track are kept!
     """
 
@@ -165,7 +164,6 @@ def process_folder(smf_dir, out_dir):
                          os.path.basename(smf).replace('.MID', '.jams')))
         jams.util.smkdirs(os.path.split(jams_file)[0])
         # Create a JAMS file for this track
-        print(smf)
         create_jams(smf, jams_file, metadata)
 
 
