@@ -41,6 +41,18 @@ def fill_file_metadata(jam, metadata, n_track):
     jam.file_metadata.duration = (float(d_str.split(":")[0]) * 60 +
                                   float(d_str.split(":")[1]))
 
+    # Store remaining RWC metadata in the sandbox
+    sandbox_dict = {
+        'Piece No.': metadata['Piece No.'][n_track],
+        'Cat. Suffix': metadata['Cat. Suffix'][n_track],
+        'Tr. No.': metadata['Tr. No.'][n_track],
+        'Singer Information': metadata['Singer Information'][n_track],
+        'Tempo': metadata['Tempo'][n_track],
+        'Live Instruments Used': metadata['Live Instruments Used'][n_track],
+        'Drum Information': metadata['Drum Information'][n_track]}
+
+    jam.sandbox.update(**sandbox_dict)
+
 
 def fill_annotation_metadata(annot):
     """Fills the annotation metadata."""
