@@ -8,6 +8,9 @@ containing the files.
 Example:
 ./midi_parser.py ~/midi_files -o ~/midi_jams/
 
+NOTE: pitch bend information is ignored, so notes with pitch bends will be
+converted to notes with a fixed pitch value.
+
 """
 
 __author__ = "J. Salamon"
@@ -29,7 +32,7 @@ import jams
 
 def fill_file_metadata(jam, midi_file, duration):
     """Fills the global metada into the JAMS jam."""
-    jam.file_metadata.title = os.path.basename(midi_file).strip(".mid")
+    jam.file_metadata.title = os.path.basename(midi_file)[:-4]
     jam.file_metadata.duration = duration
 
 
@@ -87,14 +90,16 @@ def process_folder(midi_dir, out_dir):
 
     # Collect all MIDI annotations.
     midi_files = jams.util.find_with_extension(midi_dir, '.mid', depth=1)
+    midi_files.extend(jams.util.find_with_extension(midi_dir, '.MID', depth=1))
+    print(len(midi_files))
 
     for mf in midi_files:
 
         jams_file = (
-            os.path.join(out_dir,
-                         os.path.basename(mf).replace('.mid', '.jams')))
+            os.path.join(out_dir, os.path.basename(mf)[:-3] + "jams"))
         jams.util.smkdirs(os.path.split(jams_file)[0])
         # Create a JAMS file for this track
+        print(mf)
         create_jams(mf, jams_file)
 
 
@@ -118,7 +123,7 @@ def main():
     logging.basicConfig(format='%(asctime)s: %(message)s', level=logging.INFO)
 
     # Run the parser
-    process_folder(args.smf_dir, args.out_dir)
+    process_folder(args.midi_dir, args.out_dir)
 
     # Done!
     logging.info("Done! Took %.2f seconds.", time.time() - start_time)
