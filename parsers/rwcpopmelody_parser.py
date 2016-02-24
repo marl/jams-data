@@ -1,19 +1,17 @@
 #!/usr/bin/env python
 """
-Translates the RWC-POP SMF (synchronized midi file) annotations to a set of
+Translates the RWC-POP SMF (Synchronized Midi File) annotations to a set of
 JAMS files, keeping only the melody track from each MIDI file.
 
-The original data is described online at the following URL:
+The original dataset is described online at the following URL:
     https://staff.aist.go.jp/m.goto/RWC-MDB/rwc-mdb-p.html
 
-To parse the entire dataset, you need to provide the path to two folders:
-1. The folder containing the audio files, with filenames in the form
-   RM-P[0-9]{3}*.wav from RM-P001*.wav to RM-P100*.wav
-2. The folder containing the SMF files, with filenames in the form
-   RM-P[0-9]{3}*.MID from RM-P001*.MID to RM-P100*.MID
+To parse the entire dataset, you just need to provide the path to the folder
+containing the SMF files, with filenames in the form RM-P[0-9]{3}*.MID from
+RM-P001*.MID to RM-P100*.MID
 
 Example:
-./rwcpopmelody_parser.py ~/audio ~/AIST.RWC-MDB-P-2001.SMF_SYNC -o ~/RWC_POP_MELODY_jams/
+./rwcpopmelody_parser.py ~/AIST.RWC-MDB-P-2001.SMF_SYNC -o ~/RWCPOP_melody_jams/
 
 """
 
@@ -27,19 +25,11 @@ import argparse
 import logging
 import os
 import time
-import audioread
 import midi
 import pretty_midi
-import glob
 import pandas as pd
 
 import jams
-
-
-def get_track_duration(filename):
-    '''Get the track duration for a filename'''
-    with audioread.audio_open(filename) as fdesc:
-        return fdesc.duration
 
 
 def fill_file_metadata(jam, metadata, n_track):
@@ -65,7 +55,7 @@ def fill_annotation_metadata(annot):
     annot.annotation_metadata.annotator = {}
 
 
-def create_jams(audio_file, smf_file, out_file, metadata):
+def create_jams(smf_file, out_file, metadata):
     """
     Creates a JAMS file given the RWC POP audio file (RM-P*.wav) and
     corresponding smf file (RM-P*.MID).
@@ -80,13 +70,6 @@ def create_jams(audio_file, smf_file, out_file, metadata):
 
     # Track 0 is metadata that we need
     melody.append(m[0])
-
-    # Collect track text (convert to lower case and remove spaces)
-    # track_text = []
-    # for t in m:
-    #     for e in t:
-    #         if isinstance(e, midi.TrackNameEvent):
-    #             track_text.append("".join(e.text.lower().split()))
 
     # Collect track text (convert to lower case and remove spaces)
     track_text = ["".join(e.text.lower().split()) for t in m
@@ -153,7 +136,7 @@ def create_jams(audio_file, smf_file, out_file, metadata):
     os.remove(temp_midi)
 
 
-def process_folder(audio_dir, smf_dir, out_dir):
+def process_folder(smf_dir, out_dir):
     """Converts the original SMF annotations into the JAMS format (keeping only
     the notes of the melody track), and saves them in the out_dir folder."""
 
@@ -164,16 +147,14 @@ def process_folder(audio_dir, smf_dir, out_dir):
     metadata = pd.read_csv('data/rwcmelodypop/metadata.csv')
 
     for smf in smf_files:
-        audio_file = (
-            glob.glob(os.path.join(audio_dir, os.path.basename(smf)[:7] +
-                                   "*.wav")))
+
         jams_file = (
             os.path.join(out_dir,
                          os.path.basename(smf).replace('.MID', '.jams')))
         jams.util.smkdirs(os.path.split(jams_file)[0])
         # Create a JAMS file for this track
         print(smf)
-        create_jams(audio_file, smf, jams_file, metadata)
+        create_jams(smf, jams_file, metadata)
 
 
 def main():
@@ -182,16 +163,13 @@ def main():
         description="Converts the RWC POP dataset to the JAMS format, keeping "
                     "only the notes of the melody track.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("audio_dir",
-                        action="store",
-                        help="RWC POP audio folder")
     parser.add_argument("smf_dir",
                         action="store",
                         help="RWC POP SMF folder")
     parser.add_argument("-o",
                         action="store",
                         dest="out_dir",
-                        default="RWC_POP_MELODY_jams",
+                        default="RWCPOP_melody_jams",
                         help="Output JAMS folder")
     args = parser.parse_args()
     start_time = time.time()
@@ -200,7 +178,7 @@ def main():
     logging.basicConfig(format='%(asctime)s: %(message)s', level=logging.INFO)
 
     # Run the parser
-    process_folder(args.audio_dir, args.smf_dir, args.out_dir)
+    process_folder(args.smf_dir, args.out_dir)
 
     # Done!
     logging.info("Done! Took %.2f seconds.", time.time() - start_time)
