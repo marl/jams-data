@@ -27,6 +27,7 @@ labels_map = {
     "b/c'": "no_function",
     "bagpipes": "instrumental",
     "banjo": "instrumental",
+    "bass": "instrumental",
     "code": "coda",
     "dialog": "spoken",
     "female": "voice_female",
@@ -50,7 +51,13 @@ labels_map = {
     "violin": "instrumental",
     "vocalizations": "voice",
     "vocals": "voice",
-    "w/dialog": "spoken"
+    "w/dialog": "spoken",
+    "strings": "instrumental",
+    "variation_1": "no_function",
+    "variation_2": "no_function",
+    "variation_3": "no_function",
+    "response": "call_and_response",
+    "&pause": "no_function",
 }
 
 
@@ -242,7 +249,9 @@ def process(in_dir, out_dir):
     # Open CSV with metadata
     with open(os.path.join(in_dir, "metadata", "metadata.csv")) as fh:
         csv_reader = csv.reader(fh)
-        for i, metadata in list(enumerate(csv_reader)):
+        for i, metadata in enumerate(csv_reader):
+            if not metadata:
+                continue
             if metadata[0] == "SONG_ID":
                 continue
             # Create a JAMS file for this track
