@@ -24,7 +24,7 @@ __email__ = "oriol@nyu.edu"
 def create_jams(song_title):
     """Creates the JAMS object."""
     jam = jams.JAMS()
-    jam.file_metadata.duration = 0    # All symbolic
+    jam.file_metadata.duration = 1    # All symbolic
     jam.file_metadata.artist = ""     # TODO
     jam.file_metadata.title = song_title
     return jam
@@ -41,7 +41,18 @@ def create_annotation(ann, ann_id):
     pattern_ann.annotation_metadata.version = "1.0"
 
     # Data
-
+    for confidence in ann.keys():
+        # TODO
+        for i, (pitch, dur) in enumerate(ann[confidence]):
+            val = {
+                "pattern_id": i + 1,
+                "midi_pitch": pitch,
+                "morph_pitch": pitch,
+                "staff": 1,
+                "occurrence_id": 1  # TODO
+            }
+            pattern_ann.append(time=0, duration=dur, value=val,
+                               confidence=confidence)
 
     return pattern_ann
 
@@ -50,12 +61,12 @@ def parse_song(song_file, out_dir):
     """Parses a single song contained in the given pickle file and
     places it in the output dir."""
     with open(song_file, "rb") as f:
-        ann = pickle.load(f)
+        song = pickle.load(f)
 
     song_title = os.path.splitext(os.path.basename(song_file))[0]
     jam = create_jams(song_title)
-    for ann_id in ann.keys():
-        pattern_ann = create_annotation(ann, ann_id)
+    for ann_id in song.keys():
+        pattern_ann = create_annotation(song[ann_id], ann_id)
         jam.annotations.append(pattern_ann)
 
     out_file = os.path.join(out_dir, song_title + ".jams")
