@@ -3,7 +3,7 @@
 This script parses the HEMAN dataset into the JAMS format.
 
 Usage example:
-    ./heman_parser.py salami-data-public/ OutputSalamiJAMS
+    ./heman_parser.py heman_data/ output_heman_jams
 """
 
 import argparse
