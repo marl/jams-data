@@ -37,22 +37,25 @@ def create_annotation(ann, ann_id):
     # Metadata
     pattern_ann.annotation_metadata.corpus = "HEMAN"
     pattern_ann.annotation_metadata.annotator = ann_id
-    pattern_ann.annotation_metadata.curator = "Oriol Nieto & Iris Ren"
+    pattern_ann.annotation_metadata.curator = "Iris Ren & Oriol Nieto"
     pattern_ann.annotation_metadata.version = "1.0"
 
     # Data
+    pattern_id = 1
     for confidence in ann.keys():
-        # TODO
-        for i, (pitch, dur) in enumerate(ann[confidence]):
-            val = {
-                "pattern_id": i + 1,
-                "midi_pitch": pitch,
-                "morph_pitch": pitch,
-                "staff": 1,
-                "occurrence_id": 1  # TODO
-            }
-            pattern_ann.append(time=0, duration=dur, value=val,
-                               confidence=confidence)
+        for pattern in ann[confidence]:
+            for onset, pitch in pattern:
+                val = {
+                    "pattern_id": pattern_id,
+                    "midi_pitch": pitch,
+                    "morph_pitch": pitch,
+                    "staff": 1,
+                    "occurrence_id": 1  # TODO
+                }
+                dur = 1  # TODO
+                pattern_ann.append(time=onset, duration=dur, value=val,
+                                   confidence=confidence)
+            pattern_id += 1
 
     return pattern_ann
 
