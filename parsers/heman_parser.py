@@ -17,7 +17,7 @@ import jams
 
 __author__ = "Oriol Nieto"
 __license__ = "MIT"
-__version__ = "1.0"
+__version__ = "1.1"
 __email__ = "oriol@nyu.edu"
 
 
@@ -37,8 +37,9 @@ def create_annotation(ann, ann_id):
     # Metadata
     pattern_ann.annotation_metadata.corpus = "HEMAN"
     pattern_ann.annotation_metadata.annotator = ann_id
-    pattern_ann.annotation_metadata.curator = "Iris Ren & Oriol Nieto"
-    pattern_ann.annotation_metadata.version = "1.0"
+    pattern_ann.annotation_metadata.curator = jams.Curator(
+        name="Iris Yuping Ren", email="yuping.ren.iris@gmail.com")
+    pattern_ann.annotation_metadata.version = "1.1"
 
     # Data
     pattern_id = 1
